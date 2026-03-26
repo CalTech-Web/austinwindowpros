@@ -270,14 +270,21 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((t) => (
-              <div key={t.name} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <div className="flex mb-3" style={{ color: "#f59e0b" }}>
+              <div key={t.name} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 relative overflow-hidden">
+                <span
+                  className="absolute -top-4 left-3 text-9xl font-serif leading-none pointer-events-none select-none"
+                  style={{ color: "#3b82f6", opacity: 0.07 }}
+                  aria-hidden="true"
+                >
+                  &ldquo;
+                </span>
+                <div className="flex mb-3 relative" style={{ color: "#f59e0b" }}>
                   {"★★★★★".split("").map((s, i) => <span key={i}>{s}</span>)}
                 </div>
-                <p className="text-sm leading-relaxed mb-4 italic" style={{ color: "#374151" }}>
+                <p className="text-sm leading-relaxed mb-4 italic relative" style={{ color: "#374151" }}>
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <div>
+                <div className="relative">
                   <p className="font-semibold text-sm" style={{ color: "#1a3a5c" }}>{t.name}</p>
                   <p className="text-xs" style={{ color: "#6b7280" }}>{t.location}</p>
                 </div>
