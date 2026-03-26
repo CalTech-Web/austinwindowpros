@@ -10,6 +10,24 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "casement-vs-double-hung-windows",
+    title: "Casement vs. Double-Hung Windows: Which Style Fits Your Austin Home",
+    excerpt:
+      "Double-hung is the default. Casement windows solve specific problems double-hung cannot. Here is how to decide which style belongs in each room before you order.",
+    date: "March 27, 2026",
+    image: "/images/gallery/project-08.jpg",
+    category: "Buying Guide",
+  },
+  {
+    slug: "replace-one-window-or-all",
+    title: "Should You Replace One Window or All of Them at Once?",
+    excerpt:
+      "One failed window raises the question about the rest. The answer depends on age, budget, and what a close look at the remaining windows actually shows.",
+    date: "March 27, 2026",
+    image: "/images/gallery/project-11.jpg",
+    category: "Buying Guide",
+  },
+  {
     slug: "how-to-choose-window-contractor-austin",
     title: "How to Choose a Window Contractor in Austin",
     excerpt:

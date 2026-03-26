@@ -66,10 +66,10 @@ export default function PatioDoorPage() {
                 Sliding Patio Doors
               </h3>
               <p className="text-sm leading-relaxed mb-4" style={{ color: "#6b7280" }}>
-                Our sliding patio doors glide on precision stainless steel rollers for decades of smooth, reliable operation. Available with multiple glass panel configurations and Energy Star glass.
+                Most Austin back yard connections are a sliding glass door, and the hardware is usually what goes first. The rollers wear, the track corrodes, and a door that once glided easily starts dragging in summer heat. We replace sliding patio doors with precision-roller units custom sized to your exact opening, with Energy Star glass rated for the Texas Southern climate zone.
               </p>
               <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>
-                Custom sizing ensures a perfect fit even in non-standard openings, and the multi-point locking systems provide peace of mind.
+                Integrated screen track is included. Multi-point locking systems available on request.
               </p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
@@ -77,10 +77,10 @@ export default function PatioDoorPage() {
                 French Patio Doors
               </h3>
               <p className="text-sm leading-relaxed mb-4" style={{ color: "#6b7280" }}>
-                French doors add architectural elegance to any home. We offer both inswing and outswing configurations with modern fiberglass and composite jambs for superior weather resistance.
+                French doors work best when the rough opening is wide enough for the symmetrical panel layout, typically 72 inches or wider. Both inswing and outswing configurations are available. Fiberglass and composite jambs hold up to Austin heat without the repainting cycle that comes with wood frames.
               </p>
               <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>
-                Glass insert options range from clear to decorative, with full Low-E and Energy Star qualification available throughout.
+                Glass insert options from narrow sidelite to full decorative panels, all with Low-E and Energy Star qualification available.
               </p>
             </div>
           </div>

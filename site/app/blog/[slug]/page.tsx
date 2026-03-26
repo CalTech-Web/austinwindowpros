@@ -3,6 +3,42 @@ import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
 
 const posts: Record<string, { title: string; date: string; category: string; body: string }> = {
+  "casement-vs-double-hung-windows": {
+    title: "Casement vs. Double-Hung Windows: Which Style Fits Your Austin Home",
+    date: "March 27, 2026",
+    category: "Buying Guide",
+    body: `
+      <p>The default when replacing windows is double-hung. Same style as what was there before, familiar operation, widely available. Most of the time that is the right call. But casement windows solve specific problems that double-hung windows do not, and knowing the difference before you order saves you from fixing the right problem with the wrong window.</p>
+      <h2>How Each Window Works</h2>
+      <p>Double-hung windows have two sashes that slide vertically. The bottom sash goes up, the top sash comes down, and both tilt inward for cleaning. Casement windows are hinged on one side and crank open outward. When a casement closes, the sash presses against the frame on all four sides. That compression seal is tighter than what a sliding sash achieves, which matters in a climate where summer heat finds every gap.</p>
+      <h2>Ventilation Differences</h2>
+      <p>This is where casement windows have a measurable edge. When a casement is fully open, the sash acts as a scoop that redirects outside airflow into the room. A double-hung open at both sashes pulls air in at the bottom and lets it out at the top, but it catches less of a cross-breeze. For bedrooms and bathrooms on south or southeast-facing walls in Austin homes, a casement at the right position captures more of the prevailing wind.</p>
+      <h2>Where Double-Hung Wins</h2>
+      <p>Double-hung windows are the right choice for living rooms, dining areas, and any room where flexibility and a traditional look matter more than maximum airflow. They are also the lower-cost option. A vinyl double-hung from Alside typically runs 10 to 15 percent less than a comparable casement from the same manufacturer. If you are replacing 14 windows in a 1990s Austin house and budget is a real factor, double-hung throughout is a practical, durable answer.</p>
+      <h2>The Crank Hardware Trade-off</h2>
+      <p>Casement windows open and close with a crank operator. On quality units, that mechanism runs smoothly for years. On cheaper windows or units installed in high-humidity rooms without adequate ventilation, the crank can wear faster than a standard sash track. If you are putting casements in a bathroom or kitchen above the sink, ask your contractor about the hardware rating before selecting the unit.</p>
+      <h2>When to Mix Styles</h2>
+      <p>Nothing requires you to use the same style on every window. Casements are common in kitchens above a counter where the sill height makes a bottom-opening sash impractical. Double-hung works well everywhere else. David Adams frequently recommends casement windows for one or two specific rooms and double-hung for the rest of the house. During the in-home consultation, each opening gets measured and the use of that room enters the conversation.</p>
+      <p>Walk through each room before finalizing your window order. Name what that window is actually for. Ventilation, light, view. The style choice usually becomes obvious from the answer. Call (512) 422-1907 to set up a free in-home consultation.</p>
+    `,
+  },
+  "replace-one-window-or-all": {
+    title: "Should You Replace One Window or All of Them at Once?",
+    date: "March 27, 2026",
+    category: "Buying Guide",
+    body: `
+      <p>One window fails and the others look fine. You call for a quote on that one replacement and the contractor walks the house and says most of the other windows are not far behind. Now you have to decide how much to tackle at once. The right answer depends on your budget, how old the remaining windows are, and how long you plan to stay in the house.</p>
+      <h2>The Case for Replacing Just One</h2>
+      <p>If budget is the real constraint, replacing the failed window now and planning the rest over the next two to three years is a legitimate strategy. One failed unit does not compromise the whole house. The rest can wait if they are still holding their seals and operating properly. A free in-home consultation will tell you which windows are at risk and which have time left, so you are not guessing at priorities.</p>
+      <h2>The Case for Doing Them All at Once</h2>
+      <p>The strongest argument is efficiency. One crew visit, one disruption, everything handled. There is also a cost advantage. Per-window labor carries a setup component that scales down when you do a full house rather than a partial job. On a 14-window house, the difference between one visit and two is meaningful. David Adams can walk you through the comparison before you commit to anything.</p>
+      <h2>What to Check on the Remaining Windows</h2>
+      <p>Before deciding, assess what you actually have. Press your palm flat against the center of a closed window on a hot afternoon. Warm glass means heat is transferring through. Look for fogging or condensation between the panes, particularly in the corners. Check whether each sash closes flush and whether the lock engages fully. Any of those issues means the window is closer to failure than it appears from across the room.</p>
+      <h2>Age as the Deciding Factor</h2>
+      <p>Windows from a 1995 to 2005 build are mostly at or past the end of their practical service life. The glass seals, the weatherstripping, the frame joints all age together, and one failing seal is usually a sign that others are not far behind. If your house was built in 2000 and the original windows are still in place, you are making a partial or full replacement decision regardless of which one failed first. Knowing that upfront makes the conversation easier.</p>
+      <p>Tell us which window failed and when the house was built. We will come out, check the rest, and give you a direct answer about what needs to happen now and what can wait. Call (512) 422-1907 for a free, no-pressure consultation.</p>
+    `,
+  },
   "how-to-choose-window-contractor-austin": {
     title: "How to Choose a Window Contractor in Austin",
     date: "March 26, 2026",
