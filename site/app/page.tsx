@@ -3,8 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  title: "Austin Window Pros | Window & Door Replacement in Austin, TX",
+  description:
+    "Austin Window Pros is a locally owned window and door replacement company serving Austin, TX since 1992. Custom measured windows and doors, Energy Star products, free quotes, and financing available.",
   alternates: {
     canonical: "https://austinwindowpros.com/",
+  },
+  openGraph: {
+    title: "Austin Window Pros | Window & Door Replacement in Austin, TX",
+    description:
+      "Locally owned window and door replacement in Austin, TX since 1992. Custom measured windows and doors, Energy Star products, free quotes, and financing available.",
+    url: "https://austinwindowpros.com/",
+    type: "website",
   },
 };
 
@@ -139,12 +149,63 @@ const webSiteSchema = {
     "Austin Window Pros is a locally owned window and door replacement company serving Austin, TX and surrounding Central Texas communities since 1992.",
 };
 
+const homeFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How much does window replacement cost in Austin, TX?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Window replacement cost in Austin depends on the number of windows, frame material, and style. A quality vinyl replacement window typically runs between $300 and $600 installed. Contact us for a free, no-pressure quote specific to your home.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer financing for window replacement?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Austin Window Pros offers financing options with fast, one-click approvals to make your window or door replacement affordable. Ask us about current financing offers when you request your free quote.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What areas do you serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We serve Austin, TX and surrounding Central Texas communities including Round Rock, Cedar Park, Pflugerville, Leander, Georgetown, San Marcos, Buda, Kyle, Lakeway, and Dripping Springs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does window installation take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most residential window replacement projects are completed in a single day. Our crew arrives on time, completes the installation efficiently, and leaves the job site clean before they go.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I get a free quote?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Call us at (512) 422-1907 or use our online contact form to schedule a free in-home consultation. David Adams personally handles every consultation with no pressure and no obligation.",
+      },
+    },
+  ],
+};
+
 export default function HomePage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }}
       />
       {/* Hero */}
       <section className="relative min-h-[600px] flex items-center overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
