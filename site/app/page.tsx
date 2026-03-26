@@ -216,7 +216,7 @@ export default function HomePage() {
             fill
             className="object-cover opacity-25"
             priority
-            quality={30}
+            quality={45}
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white">
