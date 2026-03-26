@@ -109,3 +109,37 @@ Changes made:
 - site/app/sitemap.ts: Added all 5 new location pages (locations index + 4 city pages)
 [2026-03-26] Run #4 complete. Deployed to production (site-6iz0tju8v-brandon-7928s-projects.vercel.app). Build passed, all 36 pages generated successfully.
 [2026-03-26 15:04:34] Run #4 finished
+Run #4 complete. Deployed to production (36 pages, build passed).
+
+**Changes shipped:**
+
+1. **Home page metadata** — Added explicit `title`, `description`, and `openGraph` to `page.tsx`. Previously only had a canonical URL, falling back to layout defaults. Also added FAQPage JSON-LD (5 questions: cost, financing, service areas, install timeline, getting a quote) to capture "People Also Ask" on the home page.
+
+2. **LocalBusiness `areaServed`** — Added all 11 service cities to the sitewide `LocalBusiness` JSON-LD in `layout.tsx`. Explicitly signals to Google which cities are served.
+
+3. **Blog BreadcrumbList JSON-LD** — All 14 blog posts now output `BreadcrumbList` structured data (Home > Blog > Post Title), consistent with all other pages on the site.
+
+4. **Service area landing pages** — 5 new pages created to target local searches like "window replacement Round Rock TX":
+   - `/locations/` — Index page listing all 10 service cities
+   - `/locations/round-rock/` — Unique content + Service JSON-LD + FAQPage JSON-LD
+   - `/locations/cedar-park/` — Same treatment
+   - `/locations/pflugerville/` — Same treatment
+   - `/locations/leander/` — Same treatment
+
+5. **Sitemap updated** — All 5 new location pages added at priority 0.8.
+[2026-03-26 15:12:44] Run #4 finished
+[2026-03-26 15:12:49] Run #5 starting (model: sonnet)
+
+[2026-03-26] SEO Agent Run #5 — completed
+
+Changes made:
+- site/app/locations/georgetown/page.tsx: New landing page targeting Georgetown window replacement searches with full structured data (Service JSON-LD, FAQPage JSON-LD, BreadcrumbList JSON-LD)
+- site/app/locations/san-marcos/page.tsx: New landing page targeting San Marcos window replacement searches with full structured data
+- site/app/locations/buda/page.tsx: New landing page targeting Buda window replacement searches with full structured data
+- site/app/locations/kyle/page.tsx: New landing page targeting Kyle window replacement searches with full structured data
+- site/app/locations/lakeway/page.tsx: New landing page targeting Lakeway window replacement searches with full structured data
+- site/app/locations/dripping-springs/page.tsx: New landing page targeting Dripping Springs window replacement searches with full structured data
+- site/app/locations/page.tsx: Updated all 6 previously-unlinked city cards to link to their dedicated landing pages with improved descriptions
+- site/components/Footer.tsx: Converted service area text list to linked navigation, all 10 cities now link to their dedicated location pages
+- site/app/sitemap.ts: Added all 6 new location pages at priority 0.8
+[2026-03-26] Run #5 complete. Deployed to production (site-5n64z9h6o-brandon-7928s-projects.vercel.app). Build passed.
