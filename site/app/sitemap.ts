@@ -1,8 +1,32 @@
 import type { MetadataRoute } from "next";
 
+const blogSlugs = [
+  "casement-vs-double-hung-windows",
+  "replace-one-window-or-all",
+  "how-to-choose-window-contractor-austin",
+  "covered-patio-vs-screened-porch-austin",
+  "window-replacement-cost-austin",
+  "vinyl-vs-fiber-cement-siding",
+  "signs-you-need-new-windows",
+  "energy-efficient-windows-austin",
+  "window-frame-materials-guide",
+  "patio-door-options",
+  "window-installation-what-to-expect",
+  "outdoor-enclosures-austin",
+  "siding-replacement-signs-texas",
+  "entry-door-replacement-austin",
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://austinwindowpros.com";
   const now = new Date();
+
+  const blogEntries = blogSlugs.map((slug) => ({
+    url: `${base}/blog/${slug}/`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
 
   return [
     { url: base, lastModified: now, changeFrequency: "weekly", priority: 1 },
@@ -17,5 +41,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/contact/`, lastModified: now, changeFrequency: "yearly", priority: 0.9 },
     { url: `${base}/privacy-policy/`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${base}/terms-of-service/`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
+    ...blogEntries,
   ];
 }
