@@ -228,11 +228,17 @@ export default function HomePage() {
               Our simple 5-step process from first call to final inspection.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {steps.map((s) => (
-              <div key={s.step} className="text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:items-start gap-6 lg:gap-0">
+            {steps.map((s, i) => (
+              <div key={s.step} className="relative text-center lg:flex-1">
+                {i < steps.length - 1 && (
+                  <div
+                    className="hidden lg:block absolute h-px top-6 left-1/2 w-full"
+                    style={{ backgroundColor: "rgba(59,130,246,0.35)" }}
+                  />
+                )}
                 <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4"
+                  className="relative z-10 w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4"
                   style={{ backgroundColor: "#3b82f6", color: "white" }}
                 >
                   {s.step}
