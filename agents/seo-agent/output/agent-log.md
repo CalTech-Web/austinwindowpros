@@ -73,3 +73,39 @@ Changes made:
 - site/app/blog/page.tsx: Added BreadcrumbList JSON-LD
 - site/app/page.tsx: Added WebSite JSON-LD schema to improve branded search and sitelinks eligibility
 [2026-03-26] Run #3 complete. Deployed to production (site-kmcfks5da-brandon-7928s-projects.vercel.app). Build passed, all 31 pages generated successfully.
+Run #3 complete. Here's what was shipped (10 files, deployed to production):
+
+**Changes:**
+
+1. **Blog post canonical URLs** — All 14 blog posts now output `alternates.canonical` via `generateMetadata`. Prevents duplicate content penalties if Google indexes posts via multiple paths.
+
+2. **FAQPage JSON-LD + visible FAQ sections** on the 4 remaining service pages:
+   - Door Replacement — 4 questions (door types, installation time, Energy Star, brands)
+   - Siding — 4 questions (materials, Texas lifespan, vinyl vs fiber cement, timeline)
+   - Patio Door — 4 questions (sliding vs French, replacement signs, Energy Star, custom sizing)
+   - Outdoor Enclosures — 4 questions (covered patio vs screened porch, permits, timeline, materials)
+   
+   Every service page now has `FAQPage` structured data eligible for "People Also Ask" rich results.
+
+3. **Person JSON-LD for David Adams** on the About page — Signals E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness), which Google increasingly weighs for home service content.
+
+4. **BreadcrumbList JSON-LD** added to About, Gallery, and Blog index pages — consistent with all other pages now having breadcrumb structured data.
+
+5. **WebSite JSON-LD** on the Home page — Helps Google understand site identity for branded searches and sitelinks eligibility.
+[2026-03-26 15:04:29] Run #3 finished
+[2026-03-26 15:04:34] Run #4 starting (model: sonnet)
+
+[2026-03-26] SEO Agent Run #4 — completed
+
+Changes made:
+- site/app/page.tsx: Added explicit title, description, and openGraph metadata to home page (previously only had canonical); added FAQPage JSON-LD (5 questions: cost, financing, service areas, installation timeline, getting a quote)
+- site/app/layout.tsx: Added areaServed to LocalBusiness JSON-LD with all 11 service cities (Austin, Round Rock, Cedar Park, Pflugerville, Leander, Georgetown, San Marcos, Buda, Kyle, Lakeway, Dripping Springs)
+- site/app/blog/[slug]/page.tsx: Added BreadcrumbList JSON-LD (Home > Blog > Post Title) to all 14 blog post pages
+- site/app/locations/page.tsx: New service areas index page listing all 10 cities with links to dedicated pages
+- site/app/locations/round-rock/page.tsx: New landing page with unique content, Service JSON-LD, FAQPage JSON-LD, BreadcrumbList JSON-LD targeting Round Rock window replacement searches
+- site/app/locations/cedar-park/page.tsx: New landing page targeting Cedar Park window replacement searches with full structured data
+- site/app/locations/pflugerville/page.tsx: New landing page targeting Pflugerville window replacement searches with full structured data
+- site/app/locations/leander/page.tsx: New landing page targeting Leander window replacement searches with full structured data
+- site/app/sitemap.ts: Added all 5 new location pages (locations index + 4 city pages)
+[2026-03-26] Run #4 complete. Deployed to production (site-6iz0tju8v-brandon-7928s-projects.vercel.app). Build passed, all 36 pages generated successfully.
+[2026-03-26 15:04:34] Run #4 finished
