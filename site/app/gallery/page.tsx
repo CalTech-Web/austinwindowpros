@@ -19,6 +19,15 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://austinwindowpros.com/" },
+    { "@type": "ListItem", position: 2, name: "Gallery", item: "https://austinwindowpros.com/gallery/" },
+  ],
+};
+
 const projects = Array.from({ length: 30 }, (_, i) => ({
   id: i + 1,
   src: `/images/gallery/project-${String(i + 1).padStart(2, "0")}.jpg`,
@@ -28,6 +37,10 @@ const projects = Array.from({ length: 30 }, (_, i) => ({
 export default function GalleryPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       <section className="py-14" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">

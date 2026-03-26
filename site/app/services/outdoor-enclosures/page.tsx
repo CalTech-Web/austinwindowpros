@@ -38,6 +38,25 @@ const enclosureTypes = [
   },
 ];
 
+const enclosureFaqs = [
+  {
+    q: "What is the difference between a covered patio and a screened porch?",
+    a: "A covered patio provides shade and rain protection with a solid roof structure. A screened porch adds insect screening to that covered space, creating a fully enclosed outdoor area that is comfortable from spring through fall. Screened porches extend the usable season longer than open covered patios, particularly on evenings when bugs would otherwise drive you inside.",
+  },
+  {
+    q: "Do I need a permit for a covered patio or screened porch in Austin?",
+    a: "Permit requirements vary by structure size, location, and whether your neighborhood has HOA rules. Austin Window Pros checks local permit requirements and setback regulations before quoting any outdoor enclosure project. David Adams is familiar with Austin, Cedar Park, Round Rock, and other Central Texas jurisdictions.",
+  },
+  {
+    q: "How long does an outdoor enclosure project take?",
+    a: "A standard covered patio project typically takes one to two days once materials are delivered. A screened porch on an existing slab adds one to two additional days for framing and screening. New from-scratch enclosed structures with slab work take longer and depend on the scope and local permit timeline.",
+  },
+  {
+    q: "What materials do you use for outdoor enclosures?",
+    a: "Austin Window Pros uses Structall engineered insulated panels for patio covers, which are designed for Texas wind loads and do not require the repainting cycle of wood structures. For glass-enclosed sunrooms, we work with Four Seasons Sunrooms products. Screening systems use heavy-gauge aluminum frames with fiberglass mesh rated for the Texas climate.",
+  },
+];
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -47,12 +66,26 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: enclosureFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function OutdoorEnclosuresPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <ServiceHero
         title="Outdoor Enclosures in Austin, TX"
@@ -96,6 +129,25 @@ export default function OutdoorEnclosuresPage() {
               <div key={e.name} className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
                 <h3 className="font-bold text-lg mb-3" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>{e.name}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>{e.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-extrabold mb-10 text-center" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-6">
+            {enclosureFaqs.map((faq) => (
+              <div key={faq.q} className="border-b border-gray-100 pb-6 last:border-b-0">
+                <h3 className="font-bold text-base mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+                  {faq.q}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>{faq.a}</p>
               </div>
             ))}
           </div>

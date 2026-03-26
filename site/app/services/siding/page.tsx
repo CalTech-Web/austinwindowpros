@@ -28,6 +28,25 @@ const sidingTypes = [
   { name: "Composite Siding", desc: "Combines the look of wood with the durability of engineered materials. Resists impact, moisture, and UV fading." },
 ];
 
+const sidingFaqs = [
+  {
+    q: "What siding materials do you install?",
+    a: "Austin Window Pros installs vinyl siding, fiber cement siding, wood siding, stucco siding, stone veneer siding, aluminum siding, and composite siding. We can compare options side by side so you can choose the right material for your home's sun exposure, budget, and long-term plans.",
+  },
+  {
+    q: "How long does siding last in the Texas climate?",
+    a: "Quality vinyl siding typically lasts 20 to 40 years with minimal maintenance. Fiber cement siding can last 50 years or more with periodic repainting. Austin's intense UV load and summer heat accelerate color fading on vinyl, so south and west-facing walls tend to show age first.",
+  },
+  {
+    q: "What is the difference between vinyl and fiber cement siding?",
+    a: "Vinyl siding costs less, requires no painting, and is virtually maintenance free. Fiber cement siding costs more but is more dimensionally stable in Texas heat, can be repainted, and holds up better over the long term on south and west-facing exposures. Both materials resist moisture and pests better than wood.",
+  },
+  {
+    q: "How long does siding installation take?",
+    a: "A typical siding project takes two to five days depending on the size of the home and the material selected. Fiber cement takes slightly longer to install than vinyl due to handling and cutting requirements. David Adams will give you an accurate timeline when he quotes your project.",
+  },
+];
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -37,12 +56,26 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: sidingFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function SidingPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <ServiceHero
         title="Siding Installation in Austin, TX"
@@ -86,6 +119,25 @@ export default function SidingPage() {
               <div key={s.name} className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
                 <h3 className="font-bold text-base mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>{s.name}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-extrabold mb-10 text-center" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-6">
+            {sidingFaqs.map((faq) => (
+              <div key={faq.q} className="border-b border-gray-100 pb-6 last:border-b-0">
+                <h3 className="font-bold text-base mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+                  {faq.q}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>{faq.a}</p>
               </div>
             ))}
           </div>

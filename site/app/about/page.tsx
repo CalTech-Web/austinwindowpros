@@ -19,6 +19,29 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://austinwindowpros.com/" },
+    { "@type": "ListItem", position: 2, name: "About Us", item: "https://austinwindowpros.com/about/" },
+  ],
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "David Adams",
+  jobTitle: "Founder & Owner",
+  description: "David Adams founded Austin Window Pros in 1992 and has over 40 years of experience in the home improvement industry. He personally handles every consultation and is involved in each project from first contact through installation.",
+  worksFor: {
+    "@type": "LocalBusiness",
+    name: "Austin Window Pros",
+    url: "https://austinwindowpros.com",
+  },
+  url: "https://austinwindowpros.com/about/",
+};
+
 const differentiators = [
   "Locally owned and operated in Austin, TX with deep community roots since 1992",
   "David Adams personally involved from first contact through project completion",
@@ -56,6 +79,14 @@ const testimonials = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       {/* Hero */}
       <section className="py-14" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">

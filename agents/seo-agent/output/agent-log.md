@@ -42,3 +42,33 @@ Changes made:
 - site/app/gallery/page.tsx: Added OpenGraph metadata, canonical URL; improved title to "Window & Door Project Gallery"
 - site/app/blog/page.tsx: Added OpenGraph metadata, canonical URL; improved title to "Window & Door Tips | Austin Blog"
 [2026-03-26 14:48:12] Run #2 finished
+Run #2 complete. Here's what was shipped:
+
+**Changes (10 files, deployed to production):**
+
+1. **All pages** — Added `alternates.canonical` URLs to home, all 5 service pages, about, gallery, blog, and contact. Prevents duplicate content penalties.
+
+2. **All service + secondary pages** — Added per-page `openGraph` metadata (title, description, URL) so social shares and Google previews show the correct page-specific content instead of falling back to the site-level defaults.
+
+3. **All 5 service pages** — Added `BreadcrumbList` JSON-LD structured data, enabling Google to display rich breadcrumb trails in search results. Patio Door gets a 3-level breadcrumb (Home > Door Replacement > Patio Doors).
+
+4. **`/services/window-replacement/`** — Added a visible "Frequently Asked Questions" section (4 questions covering benefits, replacement signs, installation time, and brands) plus `FAQPage` JSON-LD to capture "People Also Ask" rich results — the highest-traffic service page.
+
+5. **`/contact/`** — Added `FAQPage` JSON-LD using the 5 existing contact page FAQs, enabling rich results for common homeowner questions.
+
+6. **Page title improvements** — "About Us" → "About Austin Window Pros", "Project Gallery" → "Window & Door Project Gallery", "Blog" → "Window & Door Tips | Austin Blog".
+[2026-03-26 14:53:51] Run #2 finished
+[2026-03-26 14:53:56] Run #3 starting (model: sonnet)
+
+[2026-03-26] SEO Agent Run #3 — completed
+
+Changes made:
+- site/app/blog/[slug]/page.tsx: Added alternates.canonical to generateMetadata so all 14 blog post pages output a canonical URL (prevents duplicate content penalties)
+- site/app/services/door-replacement/page.tsx: Added 4-question FAQPage JSON-LD and visible FAQ section covering door types, installation time, Energy Star certification, and brands
+- site/app/services/siding/page.tsx: Added 4-question FAQPage JSON-LD and visible FAQ section covering siding materials, Texas climate lifespan, vinyl vs fiber cement, and installation timeline
+- site/app/services/patio-door/page.tsx: Added 4-question FAQPage JSON-LD and visible FAQ section covering sliding vs French doors, replacement signs, Energy Star qualification, and custom sizing
+- site/app/services/outdoor-enclosures/page.tsx: Added 4-question FAQPage JSON-LD and visible FAQ section covering covered patio vs screened porch, Austin permit requirements, project timeline, and materials
+- site/app/about/page.tsx: Added Person JSON-LD for David Adams (E-E-A-T signal) and BreadcrumbList JSON-LD
+- site/app/gallery/page.tsx: Added BreadcrumbList JSON-LD
+- site/app/blog/page.tsx: Added BreadcrumbList JSON-LD
+- site/app/page.tsx: Added WebSite JSON-LD schema to improve branded search and sitelinks eligibility

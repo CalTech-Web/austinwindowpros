@@ -18,6 +18,15 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://austinwindowpros.com/" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://austinwindowpros.com/blog/" },
+  ],
+};
+
 const posts = [
   {
     slug: "casement-vs-double-hung-windows",
@@ -150,6 +159,10 @@ const posts = [
 export default function BlogPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero */}
       <section className="py-14" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">

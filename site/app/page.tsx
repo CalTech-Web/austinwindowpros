@@ -130,9 +130,22 @@ const testimonials = [
   },
 ];
 
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Austin Window Pros",
+  url: "https://austinwindowpros.com",
+  description:
+    "Austin Window Pros is a locally owned window and door replacement company serving Austin, TX and surrounding Central Texas communities since 1992.",
+};
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+      />
       {/* Hero */}
       <section className="relative min-h-[600px] flex items-center overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="absolute inset-0 z-0">

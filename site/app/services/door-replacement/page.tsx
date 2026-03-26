@@ -38,6 +38,25 @@ const doorTypes = [
 
 const brands = ["Therma-Tru", "Neumadoors", "Masonite"];
 
+const doorFaqs = [
+  {
+    q: "What types of doors do you install?",
+    a: "Austin Window Pros installs fiberglass, steel, and wood entry doors, along with sliding patio doors and French patio doors. Fiberglass doors from Therma-Tru and Masonite are our most popular choice for Austin homeowners due to their durability and low maintenance in the Texas climate.",
+  },
+  {
+    q: "How long does door installation take?",
+    a: "A standard entry door or patio door replacement is typically completed in a single day. The crew removes the existing door, inspects the rough opening, installs and seals the new door, and completes a full walkthrough before leaving. The job site is cleaned before the crew goes.",
+  },
+  {
+    q: "Are your replacement doors Energy Star Qualified?",
+    a: "Yes. Every door we install is Energy Star Qualified with Low-E glass and manufacturer warranty coverage. Energy Star certified doors are tested to perform in Austin's Southern climate zone, reducing heat transfer and lowering your energy bills.",
+  },
+  {
+    q: "What door brands do you carry?",
+    a: "We carry Therma-Tru, Neumadoors, and Masonite doors. All three manufacturers offer strong warranty programs and a wide selection of entry door and patio door styles in fiberglass, steel, and wood options.",
+  },
+];
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -47,12 +66,26 @@ const breadcrumbSchema = {
   ],
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: doorFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function DoorReplacementPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <ServiceHero
         title="Door Replacement in Austin, TX"
@@ -121,6 +154,25 @@ export default function DoorReplacementPage() {
               >
                 {b}
               </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-extrabold mb-10 text-center" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-6">
+            {doorFaqs.map((faq) => (
+              <div key={faq.q} className="border-b border-gray-100 pb-6 last:border-b-0">
+                <h3 className="font-bold text-base mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+                  {faq.q}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>{faq.a}</p>
+              </div>
             ))}
           </div>
         </div>
