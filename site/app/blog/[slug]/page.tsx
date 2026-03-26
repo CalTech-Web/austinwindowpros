@@ -3,6 +3,46 @@ import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
 
 const posts: Record<string, { title: string; date: string; category: string; body: string }> = {
+  "window-replacement-cost-austin": {
+    title: "How Much Does Window Replacement Cost in Austin?",
+    date: "March 25, 2026",
+    category: "Buying Guide",
+    body: `
+      <p>Most homeowners call with a total project in mind before they have counted their windows. Start there. A typical Austin house has somewhere between 12 and 20 windows. The count alone changes the conversation more than any other single factor.</p>
+      <h2>The Basic Price Drivers</h2>
+      <p>Three things drive the cost of a window replacement project: how many windows you are replacing, what frame material and style you choose, and whether any rough openings need repair work before the new window can go in. Labor in Austin runs roughly $150 to $300 per window depending on complexity. Material cost on top of that ranges widely, which is where the real decisions happen.</p>
+      <h2>Vinyl Windows</h2>
+      <p>A quality vinyl replacement window, custom measured to your opening, typically lands between $300 and $600 per window installed in an Austin home. That includes the Alside or comparable unit, hardware, weatherproofing, and cleanup. Vinyl is the most common choice because the performance-to-cost ratio is hard to beat. You are not sacrificing much in energy performance to save 30 percent over fiberglass.</p>
+      <h2>Fiberglass and Wood Windows</h2>
+      <p>Fiberglass composite windows typically cost 20 to 30 percent more than vinyl for the same configuration. The upgrade makes sense for homeowners who want frames they can repaint as exterior colors change, or who want tighter dimensional stability over long Texas summers. Wood and aluminum clad wood windows can run considerably higher, from $700 to over $1,000 installed per window, depending on species and cladding.</p>
+      <h2>Window Style Affects Price</h2>
+      <p>A standard double-hung or single-hung replacement window costs less than a casement or awning window of the same size, partly because the hardware is simpler. Bay windows and bow windows sit at the top of the range. They require structural consideration and more installation time. If you are replacing a standard double-hung with a picture window, note that you are trading ventilation for a lower price point since picture windows have no operating sash.</p>
+      <h2>Rough Opening Repairs</h2>
+      <p>Rotted framing around a window adds to the cost of that window, sometimes significantly. Austin's summer humidity accelerates wood rot around windows that have been leaking at the sill or frame. A professional crew checks this during removal. If the framing is sound, you pay only the window price. If there is damage, fixing it properly before the new window goes in is the right call, even if it adds cost. Skipping it means the new window will fail at the same point in a few years.</p>
+      <h2>What a Free Quote Actually Covers</h2>
+      <p>David Adams will come to your home, count the windows, inspect the frames for damage, and give you a project-level price, not an estimate that triples after the crew arrives. Call (512) 422-1907 to set up the consultation. No obligation, no pressure, no showroom visit required.</p>
+    `,
+  },
+  "vinyl-vs-fiber-cement-siding": {
+    title: "Vinyl vs. Fiber Cement Siding for Austin Homes",
+    date: "March 20, 2026",
+    category: "Siding",
+    body: `
+      <p>Vinyl costs less upfront. Fiber cement lasts longer and paints better. That is the core trade-off, and it is genuinely worth thinking through before you commit to a full re-side.</p>
+      <h2>Price Difference</h2>
+      <p>On a typical Austin home, vinyl siding runs 20 to 40 percent less than fiber cement for the same coverage area. The gap narrows when you factor in premium vinyl products like insulated vinyl, which adds a foam backing for better thermal performance. If budget is the constraint, standard vinyl delivers a solid result at a lower entry point.</p>
+      <h2>How Each Holds Up in Texas Heat</h2>
+      <p>Vinyl expands and contracts with temperature. South-facing walls in Austin can hit surface temperatures above 150 degrees Fahrenheit in August. Properly installed vinyl with adequate expansion gaps handles this without warping. Vinyl installed too tight, or already aging from a previous installation, buckles. Fiber cement is dimensionally stable at those temperatures. It does not expand significantly, so the panels stay flat and the paint holds longer.</p>
+      <h2>Painting and Color Changes</h2>
+      <p>Vinyl siding ships in its color. The pigment runs through the material, so it does not chip the way paint does. But you cannot repaint it effectively. When the color fades after 15 to 20 years of UV exposure, your options are replacement or accepting the faded look. Fiber cement takes paint and holds it well, though it does require repainting every 10 to 15 years depending on sun exposure. If you are likely to repaint your home's exterior or change the color scheme, fiber cement gives you that flexibility.</p>
+      <h2>Moisture and Pest Resistance</h2>
+      <p>Both materials resist moisture better than wood. Vinyl is impervious to it. Fiber cement can absorb some moisture at cut edges if the field cuts are not sealed, so proper installation technique matters more with fiber cement. Neither material attracts termites or other wood-boring insects, which is worth noting for Central Texas homes that border wooded lots or have had previous termite activity.</p>
+      <h2>Insulated Vinyl</h2>
+      <p>One category worth calling out separately is insulated vinyl. It wraps a foam backing around each panel, adding measurable R-value and eliminating the hollow sound that standard vinyl produces when struck. In Austin's climate, the energy benefit is real on west-facing and south-facing walls. Cost is closer to fiber cement than standard vinyl, so the comparison shifts. If insulated vinyl is on the table, ask your contractor to compare it directly against fiber cement for your specific home.</p>
+      <h2>Making the Call</h2>
+      <p>If you are staying in the house for more than 15 years and exterior color matters to you, fiber cement is the stronger long-term choice. If you are focused on upfront cost and do not plan to repaint, vinyl is a practical answer for most Austin homes. Austin Window Pros installs both. Call (512) 422-1907 for a free consultation and we will tell you what makes more sense for your specific situation.</p>
+    `,
+  },
   "signs-you-need-new-windows": {
     title: "7 Signs It's Time to Replace Your Windows",
     date: "March 15, 2026",

@@ -32,13 +32,13 @@ export default function SidingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold mb-6" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
-                New Siding Changes Everything
+                Siding That Actually Holds Up in Texas
               </h2>
               <p className="mb-4 leading-relaxed" style={{ color: "#374151" }}>
-                Worn, faded, or damaged siding is more than an eyesore. It is a source of energy loss, moisture intrusion, and declining home value. New siding from Austin Window Pros protects your home and gives it a fresh, updated look that lasts for decades.
+                Most vinyl siding fails first on south and west walls. Austin summers push surface temperatures past 150 degrees on exposed panels, and 15 years of that UV load breaks down the color and makes the material brittle enough to crack on impact. Fiber cement holds up better in that heat. Insulated vinyl is a step up from standard vinyl. Which material makes sense depends on your home&apos;s sun exposure, your budget, and how long you plan to stay.
               </p>
               <p className="leading-relaxed" style={{ color: "#374151" }}>
-                We help you select the right material, color, and profile for your home and budget, then install it cleanly and professionally. Every project is completed with attention to flashing, caulking, and weatherproofing for maximum protection.
+                Austin Window Pros installs vinyl, fiber cement, wood, stucco, stone veneer, and composite siding. David Adams can look at your exterior, tell you honestly what is wearing and what is not, and put together pricing across two or three material options so you have something real to compare. Call (512) 422-1907 for a free walkthrough.
               </p>
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden">

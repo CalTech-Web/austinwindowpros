@@ -10,6 +10,24 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "window-replacement-cost-austin",
+    title: "How Much Does Window Replacement Cost in Austin?",
+    excerpt:
+      "The honest answer depends on window count, frame material, and style. Here is how Austin homeowners typically think through the numbers before requesting a quote.",
+    date: "March 25, 2026",
+    image: "/images/gallery/project-07.jpg",
+    category: "Buying Guide",
+  },
+  {
+    slug: "vinyl-vs-fiber-cement-siding",
+    title: "Vinyl vs. Fiber Cement Siding for Austin Homes",
+    excerpt:
+      "Both materials dominate the Central Texas market. The right choice depends on your budget, maintenance tolerance, and how long you plan to stay in the house.",
+    date: "March 20, 2026",
+    image: "/images/gallery/project-21.jpg",
+    category: "Siding",
+  },
+  {
     slug: "signs-you-need-new-windows",
     title: "7 Signs It's Time to Replace Your Windows",
     excerpt:

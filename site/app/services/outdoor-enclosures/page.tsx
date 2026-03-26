@@ -42,13 +42,13 @@ export default function OutdoorEnclosuresPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold mb-6" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
-                Extend Your Living Space Outdoors
+                More of Your Yard, More of the Year
               </h2>
               <p className="mb-4 leading-relaxed" style={{ color: "#374151" }}>
-                Austin has beautiful weather most of the year, but the summer heat and unpredictable rain can limit how much time you spend outside. A covered patio, screened porch, or sunroom changes that.
+                June through September, an Austin back yard without shade is genuinely uncomfortable. Direct sun at 3pm in August is not something you work around. It is something you solve. A solid-roof patio cover drops the ambient temperature underneath by 15 to 20 degrees. A screened porch adds bug protection on top of that and stretches the usable season well into October evenings when open patios get cold.
               </p>
               <p className="leading-relaxed" style={{ color: "#374151" }}>
-                Austin Window Pros has been building outdoor living structures in Central Texas since 1992. We work with trusted suppliers including Structall and Four Seasons Sunrooms to deliver lasting quality at competitive prices.
+                Austin Window Pros has been building covered patios, pergolas, screened porches, and sunrooms in Central Texas since 1992. We work with Structall for engineered patio panels built to Texas wind loads and Four Seasons Sunrooms for glass-enclosed additions. David Adams will come out, look at your yard and how you use it, and give you a straight quote on what makes sense.
               </p>
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
