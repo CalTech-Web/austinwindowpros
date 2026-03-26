@@ -167,7 +167,7 @@ export default function HomePage() {
                 href={svc.href}
                 className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow group"
               >
-                <div className="mb-4" style={{ color: "#3b82f6" }}>{svc.icon}</div>
+                <div className="mb-4 w-16 h-16 rounded-2xl flex items-center justify-center" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>{svc.icon}</div>
                 <h3 className="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
                   {svc.title}
                 </h3>
