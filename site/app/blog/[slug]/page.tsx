@@ -3,6 +3,44 @@ import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
 
 const posts: Record<string, { title: string; date: string; category: string; body: string }> = {
+  "how-to-choose-window-contractor-austin": {
+    title: "How to Choose a Window Contractor in Austin",
+    date: "March 26, 2026",
+    category: "Buying Guide",
+    body: `
+      <p>The fastest mistake is signing with the lowest quote before you understand what it does not include. Custom measurement or stock sizing? Who backs the warranty, the contractor or the manufacturer? How many windows per day does the crew actually install? These are answerable questions, and asking them separates solid contractors from the ones who get sloppy at installation.</p>
+      <h2>Check Insurance First, Not Credentials</h2>
+      <p>Ask for a certificate of general liability insurance before the first meeting. A contractor installing windows without it leaves you holding the bag if something goes wrong on your property. Framed opening damage, a cracked sill, a worker injury, all of that becomes your problem without proper coverage. Most legitimate window contractors in Austin carry at least $1 million in general liability. If they cannot produce a certificate quickly, move on.</p>
+      <h2>Custom Measurement vs. Stock Sizing</h2>
+      <p>This question reveals the most about how a contractor operates. Stock window sizing rounds your opening to the nearest standard dimension, which means gap-filling with caulk or backer material instead of a tight frame fit. A custom measured window is ordered to your exact rough opening. The seal is better. The look is cleaner. David Adams measures every window opening himself before ordering. That is the standard worth asking about.</p>
+      <h2>Ask About the Installation Crew</h2>
+      <p>Some companies use a two-person crew for efficiency. Others send one person and take twice as long, which matters on a full-house replacement where weather exposure is a real factor. Ask who specifically will be doing the installation. Is it the company's own employees or a subcontracted crew? The answer tells you a lot about accountability when something needs to be fixed after the job is done.</p>
+      <h2>Understand the Warranty</h2>
+      <p>A manufacturer warranty covers the window unit itself, the glass seal, the hardware, the frame. It does not cover installation errors, which is where most post-installation problems originate. Ask whether the contractor provides a separate workmanship warranty on the installation. A company confident in its work offers one. Austin Window Pros backs the installation alongside the manufacturer warranty on every project.</p>
+      <h2>Red Flags to Watch For</h2>
+      <p>A quote significantly below every other estimate is not good luck. It usually means something is different, lower-grade window units, no custom measuring, a subcontracted crew with limited accountability, or a warranty with exclusions in the fine print. Pressure to sign the same day is another flag. Legitimate contractors in Austin give you time to compare.</p>
+      <h2>What a Good First Meeting Looks Like</h2>
+      <p>The contractor should come to your home, not ask you to a showroom. They should measure the windows themselves. They should give you material options with honest trade-offs, not steer you toward whatever margin is best for them. David Adams has been running exactly this kind of in-home consultation since 1992. Call (512) 422-1907 to set one up.</p>
+    `,
+  },
+  "covered-patio-vs-screened-porch-austin": {
+    title: "Covered Patio or Screened Porch: What Actually Gets Used in Austin",
+    date: "March 26, 2026",
+    category: "Outdoor Enclosures",
+    body: `
+      <p>By mid-June, the average Austin back patio sits empty by noon. Shade solves half of that. A screened porch solves most of it. The choice between them comes down to how you actually use the space and how far into the year you want to keep using it.</p>
+      <h2>What a Covered Patio Does</h2>
+      <p>A solid-roof patio cover drops the temperature underneath by 15 to 20 degrees compared to direct sun. On a 105-degree August afternoon, that brings you to something closer to 85, which is workable. It handles rain. It protects furniture. Austin Window Pros builds covered patios with Structall insulated panels engineered for Texas wind loads, which means no warping and no repainting cycle like you get with wood pergola roofing. Most covered patio projects complete in one to two days.</p>
+      <h2>What a Screened Porch Adds</h2>
+      <p>Screens add bug control, which matters in Austin from April through October. Cedar Park and Round Rock homes near wooded lots know this particularly well. A screened porch also captures late evening cooling without the flying insects that make open patios miserable past 8pm in summer. The other advantage is season extension. Open patios in Austin get cold and windswept in November evenings. A screened porch stays comfortable two to three weeks longer on each end of the season.</p>
+      <h2>Cost and Timeline</h2>
+      <p>A covered patio is the lower-cost option, by a meaningful margin. A screened porch on an existing covered slab adds the screening system and frame to that base. Building a new screened porch from scratch, slab included, is the most involved project. Neither requires permits in most Austin jurisdictions for structures under a certain square footage, though that varies by neighborhood and HOA. David Adams knows the local rules and checks setback requirements before quoting.</p>
+      <h2>When to Consider a Sunroom Instead</h2>
+      <p>If you want to use the space in January, a screened porch will not be comfortable without a heater. A Four Seasons sunroom with a climate control option is the year-round answer. It is also a different category of project and investment. For most Austin homeowners whose goal is getting through summer and staying out through fall evenings, a covered patio or screened porch is the right call.</p>
+      <h2>The Question Worth Asking</h2>
+      <p>Tell David Adams how you use your yard now and what frustrates you about it. That conversation usually points clearly at one option. Call (512) 422-1907 for a free consultation and quote.</p>
+    `,
+  },
   "window-replacement-cost-austin": {
     title: "How Much Does Window Replacement Cost in Austin?",
     date: "March 25, 2026",

@@ -33,7 +33,7 @@ export default function OutdoorEnclosuresPage() {
     <>
       <ServiceHero
         title="Outdoor Enclosures in Austin, TX"
-        subtitle="Covered patios, pergolas, screened porches, and sunrooms to expand your living space and make the most of Austin's beautiful weather."
+        subtitle="Covered patios, pergolas, screened porches, and sunrooms built for the Texas climate. Get outside in June. Stay out through October."
         breadcrumb="Outdoor Enclosures"
       />
 

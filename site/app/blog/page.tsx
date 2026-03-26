@@ -10,6 +10,24 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "how-to-choose-window-contractor-austin",
+    title: "How to Choose a Window Contractor in Austin",
+    excerpt:
+      "The lowest quote is not always the best value. Here is what to ask before signing, from insurance and crew accountability to warranty terms and measurement process.",
+    date: "March 26, 2026",
+    image: "/images/gallery/project-01.jpg",
+    category: "Buying Guide",
+  },
+  {
+    slug: "covered-patio-vs-screened-porch-austin",
+    title: "Covered Patio or Screened Porch: What Actually Gets Used in Austin",
+    excerpt:
+      "Shade solves half the problem. Bug control solves most of it. Here is how to choose between a covered patio and a screened porch for an Austin back yard.",
+    date: "March 26, 2026",
+    image: "/images/gallery/project-20.jpg",
+    category: "Outdoor Enclosures",
+  },
+  {
     slug: "window-replacement-cost-austin",
     title: "How Much Does Window Replacement Cost in Austin?",
     excerpt:
