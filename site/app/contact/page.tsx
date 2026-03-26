@@ -6,6 +6,16 @@ export const metadata: Metadata = {
   title: "Contact Us | Get a Free Quote",
   description:
     "Contact Austin Window Pros for a free window or door replacement quote in Austin, TX. Call (512) 422-1907 or fill out our online form.",
+  alternates: {
+    canonical: "https://austinwindowpros.com/contact/",
+  },
+  openGraph: {
+    title: "Contact Austin Window Pros | Get a Free Quote",
+    description:
+      "Contact Austin Window Pros for a free window or door replacement quote in Austin, TX. Call (512) 422-1907 or fill out our online form.",
+    url: "https://austinwindowpros.com/contact/",
+    type: "website",
+  },
 };
 
 const faqs = [
@@ -31,9 +41,23 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero */}
       <section className="py-14" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">

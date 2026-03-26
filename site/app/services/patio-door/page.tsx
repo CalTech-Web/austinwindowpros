@@ -7,11 +7,35 @@ export const metadata: Metadata = {
   title: "Patio Door Replacement Austin TX",
   description:
     "Sliding and French patio door replacement in Austin, TX. Energy Star glass, custom sizing, and professional installation by Austin Window Pros.",
+  alternates: {
+    canonical: "https://austinwindowpros.com/services/patio-door/",
+  },
+  openGraph: {
+    title: "Patio Door Replacement in Austin, TX | Austin Window Pros",
+    description:
+      "Sliding and French patio door replacement in Austin, TX. Energy Star glass, custom sizing, and professional installation by Austin Window Pros.",
+    url: "https://austinwindowpros.com/services/patio-door/",
+    type: "website",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://austinwindowpros.com/" },
+    { "@type": "ListItem", position: 2, name: "Door Replacement", item: "https://austinwindowpros.com/services/door-replacement/" },
+    { "@type": "ListItem", position: 3, name: "Patio Doors", item: "https://austinwindowpros.com/services/patio-door/" },
+  ],
 };
 
 export default function PatioDoorPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <ServiceHero
         title="Patio Door Replacement Austin, TX"
         subtitle="Sliding and French patio doors with Energy Star glass, smooth operation, and custom sizing to fit your home perfectly."

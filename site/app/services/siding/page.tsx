@@ -7,6 +7,16 @@ export const metadata: Metadata = {
   title: "Siding Installation Austin TX",
   description:
     "Vinyl, fiber cement, wood, and composite siding installation in Austin, TX. Professional installation by Austin Window Pros since 1992.",
+  alternates: {
+    canonical: "https://austinwindowpros.com/services/siding/",
+  },
+  openGraph: {
+    title: "Siding Installation in Austin, TX | Austin Window Pros",
+    description:
+      "Vinyl, fiber cement, wood, and composite siding installation in Austin, TX. Professional installation by Austin Window Pros since 1992.",
+    url: "https://austinwindowpros.com/services/siding/",
+    type: "website",
+  },
 };
 
 const sidingTypes = [
@@ -18,9 +28,22 @@ const sidingTypes = [
   { name: "Composite Siding", desc: "Combines the look of wood with the durability of engineered materials. Resists impact, moisture, and UV fading." },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://austinwindowpros.com/" },
+    { "@type": "ListItem", position: 2, name: "Siding Installation", item: "https://austinwindowpros.com/services/siding/" },
+  ],
+};
+
 export default function SidingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <ServiceHero
         title="Siding Installation in Austin, TX"
         subtitle="Transform your home's exterior with durable, beautiful siding. Vinyl, fiber cement, wood, stucco, and more, professionally installed by Austin's local experts."

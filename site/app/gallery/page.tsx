@@ -4,9 +4,19 @@ import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
 
 export const metadata: Metadata = {
-  title: "Project Gallery",
+  title: "Window & Door Project Gallery",
   description:
     "Browse Austin Window Pros project gallery. Real window, door, and siding installations across Austin and Central Texas since 1992.",
+  alternates: {
+    canonical: "https://austinwindowpros.com/gallery/",
+  },
+  openGraph: {
+    title: "Window & Door Project Gallery | Austin Window Pros",
+    description:
+      "Browse Austin Window Pros project gallery. Real window, door, and siding installations across Austin and Central Texas since 1992.",
+    url: "https://austinwindowpros.com/gallery/",
+    type: "website",
+  },
 };
 
 const projects = Array.from({ length: 30 }, (_, i) => ({

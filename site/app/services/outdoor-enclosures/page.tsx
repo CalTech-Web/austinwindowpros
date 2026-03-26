@@ -7,6 +7,16 @@ export const metadata: Metadata = {
   title: "Outdoor Enclosures Austin TX",
   description:
     "Covered patios, pergolas, screened porches, and sunrooms in Austin, TX. Austin Window Pros has been building outdoor living spaces since 1992.",
+  alternates: {
+    canonical: "https://austinwindowpros.com/services/outdoor-enclosures/",
+  },
+  openGraph: {
+    title: "Outdoor Enclosures in Austin, TX | Austin Window Pros",
+    description:
+      "Covered patios, pergolas, screened porches, and sunrooms in Austin, TX. Austin Window Pros has been building outdoor living spaces since 1992.",
+    url: "https://austinwindowpros.com/services/outdoor-enclosures/",
+    type: "website",
+  },
 };
 
 const enclosureTypes = [
@@ -28,9 +38,22 @@ const enclosureTypes = [
   },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://austinwindowpros.com/" },
+    { "@type": "ListItem", position: 2, name: "Outdoor Enclosures", item: "https://austinwindowpros.com/services/outdoor-enclosures/" },
+  ],
+};
+
 export default function OutdoorEnclosuresPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <ServiceHero
         title="Outdoor Enclosures in Austin, TX"
         subtitle="Covered patios, pergolas, screened porches, and sunrooms built for the Texas climate. Get outside in June. Stay out through October."

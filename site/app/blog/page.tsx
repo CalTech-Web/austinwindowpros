@@ -3,9 +3,19 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Window & Door Tips | Austin Blog",
   description:
     "Window and door replacement tips, guides, and news from Austin Window Pros. Learn how to choose the best windows for your Austin, TX home.",
+  alternates: {
+    canonical: "https://austinwindowpros.com/blog/",
+  },
+  openGraph: {
+    title: "Window & Door Tips | Austin Window Pros Blog",
+    description:
+      "Window and door replacement tips, guides, and news from Austin Window Pros. Learn how to choose the best windows for your Austin, TX home.",
+    url: "https://austinwindowpros.com/blog/",
+    type: "website",
+  },
 };
 
 const posts = [

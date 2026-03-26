@@ -8,6 +8,16 @@ export const metadata: Metadata = {
   title: "Door Replacement Austin TX",
   description:
     "Entry doors, sliding patio doors, and French doors in Austin, TX. Energy Star Qualified with Low-E glass. Free quotes from Austin Window Pros.",
+  alternates: {
+    canonical: "https://austinwindowpros.com/services/door-replacement/",
+  },
+  openGraph: {
+    title: "Door Replacement in Austin, TX | Austin Window Pros",
+    description:
+      "Entry doors, sliding patio doors, and French doors in Austin, TX. Energy Star Qualified with Low-E glass. Free quotes from Austin Window Pros.",
+    url: "https://austinwindowpros.com/services/door-replacement/",
+    type: "website",
+  },
 };
 
 const doorTypes = [
@@ -28,9 +38,22 @@ const doorTypes = [
 
 const brands = ["Therma-Tru", "Neumadoors", "Masonite"];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://austinwindowpros.com/" },
+    { "@type": "ListItem", position: 2, name: "Door Replacement", item: "https://austinwindowpros.com/services/door-replacement/" },
+  ],
+};
+
 export default function DoorReplacementPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <ServiceHero
         title="Door Replacement in Austin, TX"
         subtitle="Beautiful, energy-efficient entry doors and patio doors installed by Austin's local experts. Energy Star Qualified with Low-E glass and manufacturer warranties."

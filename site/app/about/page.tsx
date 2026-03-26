@@ -4,9 +4,19 @@ import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Austin Window Pros",
   description:
     "Learn about Austin Window Pros, a locally owned window and door replacement company founded by David Adams in 1992 with over 40 years of industry experience.",
+  alternates: {
+    canonical: "https://austinwindowpros.com/about/",
+  },
+  openGraph: {
+    title: "About Austin Window Pros | Locally Owned Since 1992",
+    description:
+      "Learn about Austin Window Pros, a locally owned window and door replacement company founded by David Adams in 1992 with over 40 years of industry experience.",
+    url: "https://austinwindowpros.com/about/",
+    type: "website",
+  },
 };
 
 const differentiators = [

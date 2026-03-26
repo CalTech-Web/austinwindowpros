@@ -7,6 +7,16 @@ export const metadata: Metadata = {
   title: "Window Replacement Austin TX",
   description:
     "Custom window replacement in Austin, TX. Double-pane, Energy Star windows in vinyl, wood, and fiberglass. Free quotes from Austin Window Pros.",
+  alternates: {
+    canonical: "https://austinwindowpros.com/services/window-replacement/",
+  },
+  openGraph: {
+    title: "Window Replacement in Austin, TX | Austin Window Pros",
+    description:
+      "Custom window replacement in Austin, TX. Double-pane, Energy Star windows in vinyl, wood, and fiberglass. Free quotes from Austin Window Pros.",
+    url: "https://austinwindowpros.com/services/window-replacement/",
+    type: "website",
+  },
 };
 
 const windowTypes = [
@@ -26,9 +36,55 @@ const materials = [
   { name: "Fiberglass Composite", desc: "The strongest and most dimensionally stable material. Resists warping, swelling, and rotting." },
 ];
 
+const windowFaqs = [
+  {
+    q: "What are the benefits of window replacement?",
+    a: "Window replacement improves energy efficiency, reduces noise, and enhances security. Upgrading to Energy Star-rated double-pane windows keeps indoor temperatures stable year-round, which lowers utility bills significantly in Austin's hot climate. New windows also enhance curb appeal and can increase your home's resale value.",
+  },
+  {
+    q: "How do I know if my windows need replacing?",
+    a: "Common signs include drafts around the frame, condensation or fogging between panes, difficulty opening or closing, rising energy bills, or visible damage to the frame or glass. Windows more than 15 to 20 years old are worth evaluating even without obvious symptoms, since the technology in a current Energy Star window is meaningfully better than what was standard in 2005.",
+  },
+  {
+    q: "How long does window installation take?",
+    a: "Most residential projects are completed in a single day. The crew arrives, removes old windows one at a time, inspects the rough openings, installs and seals the new windows, and completes a full walkthrough before leaving. The job site is cleaned as the work progresses.",
+  },
+  {
+    q: "What window brands and styles do you install?",
+    a: "We install windows from top manufacturers including Alside and Norandex in double-hung, casement, sliding, picture, awning, and bay styles. Every window is custom measured to your exact rough opening for a precise fit and airtight seal. Frame materials include vinyl, wood, aluminum clad, aluminum thermal break, and fiberglass composite.",
+  },
+];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://austinwindowpros.com/" },
+    { "@type": "ListItem", position: 2, name: "Window Replacement", item: "https://austinwindowpros.com/services/window-replacement/" },
+  ],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: windowFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function WindowReplacementPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <ServiceHero
         title="Window Replacement in Austin, TX"
         subtitle="Custom measured windows installed by experienced professionals. Energy Star qualified double-pane glass to lower your utility bills year-round."
@@ -114,6 +170,25 @@ export default function WindowReplacementPage() {
                   fill
                   className="object-cover"
                 />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-extrabold mb-10 text-center" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-6">
+            {windowFaqs.map((faq) => (
+              <div key={faq.q} className="border-b border-gray-100 pb-6 last:border-b-0">
+                <h3 className="font-bold text-base mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+                  {faq.q}
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>{faq.a}</p>
               </div>
             ))}
           </div>
