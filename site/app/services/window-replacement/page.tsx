@@ -43,23 +43,15 @@ export default function WindowReplacementPage() {
               <h2 className="text-2xl sm:text-3xl font-extrabold mb-6" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
                 Why Replace Your Windows?
               </h2>
-              <ul className="space-y-4">
-                {[
-                  "Lower energy bills with double-pane, Low-E glass that stabilizes indoor temperatures",
-                  "Block up to 99% of harmful UV rays that fade furniture and flooring",
-                  "Reduce outside noise for a quieter, more comfortable home",
-                  "Improve curb appeal and increase your home&apos;s resale value",
-                  "Eliminate drafts, condensation, and difficult operation from worn-out frames",
-                  "Upgrade to modern security features with multi-point locking systems",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-white text-xs font-bold" style={{ backgroundColor: "#3b82f6" }}>
-                      ✓
-                    </span>
-                    <span style={{ color: "#374151" }} dangerouslySetInnerHTML={{ __html: item }} />
-                  </li>
-                ))}
-              </ul>
+              <p className="mb-4 leading-relaxed" style={{ color: "#374151" }}>
+                Windows account for 25 to 30 percent of a home&apos;s heating and cooling load. In Austin, where the AC runs from May through October, that number matters. Old, failed, or single-pane windows make your HVAC work harder than it needs to, and you see it every month on your electric bill.
+              </p>
+              <p className="mb-4 leading-relaxed" style={{ color: "#374151" }}>
+                Double-pane Low-E glass reflects solar heat in summer and holds warmth in winter. Up to 99 percent of UV rays blocked at the glass means furniture and flooring last longer. The noise reduction is real too, particularly if you are near a major road or have an airport flight path overhead.
+              </p>
+              <p className="leading-relaxed" style={{ color: "#374151" }}>
+                Modern frames with multi-point locking systems are meaningfully more secure than the single-point locks found on windows from the 1990s. Curb appeal and resale value are genuine benefits as well, though they tend to be the last reason people call us. The energy savings usually close the argument first.
+              </p>
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
               <Image

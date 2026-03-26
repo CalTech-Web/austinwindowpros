@@ -45,10 +45,10 @@ export default function DoorReplacementPage() {
                 Upgrade Your Doors Inside and Out
               </h2>
               <p className="mb-4 leading-relaxed" style={{ color: "#374151" }}>
-                A new door is one of the highest-return home improvement investments. Whether you want a grand entry statement, improved security, or better energy performance on your back patio, Austin Window Pros has the right solution.
+                Most homeowners replace a door when something breaks. The deadbolt stops latching cleanly. The weather seal pulls apart. On a January morning you feel cold air at the threshold and realize the door has been leaking for years. Those are valid reasons to call. But a 20-year-old door is also undermining every other efficiency improvement you have made to the house.
               </p>
               <p className="leading-relaxed" style={{ color: "#374151" }}>
-                Every door we install is Energy Star Qualified with Low-E glass. We carry top brands including Therma-Tru, Neumadoors, and Masonite, and offer custom sizing for a perfect fit every time.
+                Austin Window Pros carries Therma-Tru, Neumadoors, and Masonite. Every door we install is Energy Star Qualified with Low-E glass and comes with manufacturer warranty coverage. We custom size entries and patio doors to your opening, so the fit is right the first time and you are not looking at visible gaps at the frame a year later.
               </p>
             </div>
             <div className="relative aspect-[4/3] rounded-xl overflow-hidden">

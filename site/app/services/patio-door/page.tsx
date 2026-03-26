@@ -26,16 +26,16 @@ export default function PatioDoorPage() {
                 Open Up Your Living Space
               </h2>
               <p className="mb-4 leading-relaxed" style={{ color: "#374151" }}>
-                A quality patio door creates a seamless connection between your indoor living space and your outdoor entertaining area. Austin Window Pros installs sliding and French patio doors with smooth, silent operation and superior energy performance.
+                A patio door that sticks, rattles in the wind, or leaks air on a July afternoon is working against you every day. The right replacement fixes that immediately. Austin Window Pros installs sliding and French patio doors with precision-roller hardware, Energy Star glass rated for the Southern climate zone, and custom sizing to fit your exact opening.
+              </p>
+              <p className="mb-4 leading-relaxed" style={{ color: "#374151" }}>
+                Both sliding and French configurations are available with multi-point locking systems. Fiberglass and composite jamb materials hold up to Austin heat better than painted wood. If you are replacing an original door from the 1990s, the difference in energy performance will be noticeable by the first full summer.
               </p>
               <ul className="space-y-3">
                 {[
-                  "Energy Star Qualified glass with Low-E coating",
-                  "Custom sizing for openings of any width",
-                  "Multi-point locking systems for security",
-                  "Sliding doors with soft-close hardware",
-                  "French doors in both inswing and outswing configurations",
-                  "Modern fiberglass and composite jamb materials",
+                  "Energy Star glass with Low-E coating for the Southern climate zone",
+                  "Custom sizing for non-standard openings",
+                  "Multi-point locking systems standard on request",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-white text-xs" style={{ backgroundColor: "#3b82f6" }}>

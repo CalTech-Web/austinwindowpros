@@ -111,6 +111,43 @@ const posts: Record<string, { title: string; date: string; category: string; bod
       <p>Tell us how you use the space now and what frustrates you about it. Heat and bugs point toward a screened porch. Direct sun with good airflow points toward a solid cover. David Adams will come out, look at your yard, and give you a straight answer with a free quote. Call (512) 422-1907 to set it up.</p>
     `,
   },
+  "siding-replacement-signs-texas": {
+    title: "Does Your Siding Need Replacing? What Texas Homes Show After 15 Years",
+    date: "March 10, 2026",
+    category: "Siding",
+    body: `
+      <p>Fifteen-year-old siding on an Austin home shows its age in specific ways. The sun does more damage here than in most parts of the country. Heat, UV, and the occasional hail event leave a pattern that is easy to read if you know what to look for.</p>
+      <h2>Faded or Chalky Color</h2>
+      <p>Vinyl siding loses its color gradually from UV exposure. A house installed in 2005 with medium-gray vinyl often looks washed out today, not from dirt but from the outermost surface of the material breaking down. A pressure wash will not restore the color. That surface degradation is also a sign the panels are getting brittle and less able to absorb impact without cracking.</p>
+      <h2>Cracks, Warping, or Buckling</h2>
+      <p>Vinyl expands and contracts with temperature. Austin summers routinely push surface temperatures on south-facing walls past 150 degrees. Panels installed without proper expansion gaps buckle. Cracks appear near fasteners. If you see wavy sections on a wall that used to be flat, the panels are expanding without room to move and the damage compounds each summer.</p>
+      <h2>Moisture Behind the Siding</h2>
+      <p>Paint peeling on interior walls near the exterior, soft drywall, or visible mold growth are the clearest signals of moisture intrusion. Siding itself rarely causes the problem. Failing caulk at windows and doors, improper flashing, or cracked panels are the entry points. Once water is behind the siding the clock is running, and what starts as a caulk job can become a framing repair.</p>
+      <h2>Hail Damage</h2>
+      <p>Central Texas gets hail every few years. A storm that dents car hoods is leaving marks on vinyl and fiber cement siding too. Hail impacts create micro-cracks that are not always visible to the eye but compromise the surface seal over time. If your area had a significant storm in the past two or three years and you have not had the siding inspected, it is worth doing before the next season.</p>
+      <h2>Wood Siding Specific Issues</h2>
+      <p>Original wood siding on Austin homes from the 1970s and 1980s sometimes survives in good shape if it has been maintained and repainted regularly. More often it has not. Soft spots in the wood, visible rot at the base or around window frames, or gaps in the paint that have not been addressed are signs the wood is failing. Fiber cement or insulated vinyl can replace it without the ongoing maintenance burden.</p>
+      <h2>Get a Free Assessment</h2>
+      <p>Austin Window Pros evaluates siding during the same consultation as windows and doors. If you are not sure whether your siding needs replacing or just cleaning and minor repairs, a free walkthrough gives you a clear answer. Call (512) 422-1907 to schedule.</p>
+    `,
+  },
+  "entry-door-replacement-austin": {
+    title: "How to Pick an Entry Door for Your Austin Home",
+    date: "March 3, 2026",
+    category: "Door Replacement",
+    body: `
+      <p>The entry door is the first thing visitors notice. It is also the thing most homeowners replace only once. Pick the wrong material and you will be repainting or refinishing it every couple of years in Austin's climate. Here is how to think through the decision before you start shopping.</p>
+      <h2>Start with the Material</h2>
+      <p>Fiberglass is the right answer for most Austin homes. It does not warp, rust, or rot, holds paint and stain well, and is available in styles that convincingly replicate wood grain. If your home has a traditional look and you want a wood feel without the upkeep, fiberglass is the more durable option for the Texas climate. Austin Window Pros installs Therma-Tru fiberglass doors, which carry a strong industry reputation for longevity.</p>
+      <p>Steel doors cost less and are harder to dent than fiberglass, but they scratch and can develop rust at the bottom edge in humid conditions if the finish is compromised. They are a reasonable choice for secondary entries. Real wood doors look exceptional and can be stained to match interior trim. The trade-off is maintenance. An unprotected wood entry door on a west-facing facade in Austin will need refinishing every two to three years.</p>
+      <h2>Glass and Light</h2>
+      <p>A fully solid door makes an entry feel dark and closed off. Most fiberglass and steel doors come with glass insert options, from a narrow sidelite panel to full decorative glass spanning much of the door face. Low-E glass keeps heat gain manageable even with large glass areas. If you have a covered porch, direct solar exposure to the door glass is reduced and you have more flexibility on glass size without sacrificing energy performance.</p>
+      <h2>Hardware and Security</h2>
+      <p>The lock is not the door, but a good door with a weak installation defeats the purpose. Every door Austin Window Pros installs gets proper strike plate depth set during installation. Multi-point locking systems are available on request for Therma-Tru and Masonite doors. If security is a priority at your primary entry, ask about reinforced frame anchoring when you request your quote.</p>
+      <h2>What the Quote Covers</h2>
+      <p>A free consultation with Austin Window Pros covers measurement, material options, hardware selection, and pricing. David Adams handles these consultations personally and has been fitting Austin homes with replacement doors since 1992. Call (512) 422-1907 or use the contact form to set up a time.</p>
+    `,
+  },
 };
 
 export async function generateStaticParams() {

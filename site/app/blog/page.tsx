@@ -19,6 +19,24 @@ const posts = [
     category: "Window Replacement",
   },
   {
+    slug: "siding-replacement-signs-texas",
+    title: "Does Your Siding Need Replacing? What Texas Homes Show After 15 Years",
+    excerpt:
+      "Austin's heat, UV exposure, and occasional hail leave specific patterns on aging siding. Here is what to look for before a cosmetic problem becomes a moisture problem.",
+    date: "March 10, 2026",
+    image: "/images/gallery/project-19.jpg",
+    category: "Siding",
+  },
+  {
+    slug: "entry-door-replacement-austin",
+    title: "How to Pick an Entry Door for Your Austin Home",
+    excerpt:
+      "Fiberglass, steel, or wood. Glass inserts or solid panels. Multi-point locks or standard deadbolts. Here is how to think through the decision before you start shopping.",
+    date: "March 3, 2026",
+    image: "/images/gallery/project-14.jpg",
+    category: "Door Replacement",
+  },
+  {
     slug: "energy-efficient-windows-austin",
     title: "How Energy-Efficient Windows Lower Your Austin Utility Bills",
     excerpt:
