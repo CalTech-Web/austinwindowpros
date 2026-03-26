@@ -8,16 +8,16 @@ const serviceLinks = [
 ];
 
 const serviceAreas = [
-  "Round Rock",
-  "Cedar Park",
-  "Pflugerville",
-  "Leander",
-  "Georgetown",
-  "San Marcos",
-  "Buda",
-  "Kyle",
-  "Lakeway",
-  "Dripping Springs",
+  { label: "Round Rock", href: "/locations/round-rock/" },
+  { label: "Cedar Park", href: "/locations/cedar-park/" },
+  { label: "Pflugerville", href: "/locations/pflugerville/" },
+  { label: "Leander", href: "/locations/leander/" },
+  { label: "Georgetown", href: "/locations/georgetown/" },
+  { label: "San Marcos", href: "/locations/san-marcos/" },
+  { label: "Buda", href: "/locations/buda/" },
+  { label: "Kyle", href: "/locations/kyle/" },
+  { label: "Lakeway", href: "/locations/lakeway/" },
+  { label: "Dripping Springs", href: "/locations/dripping-springs/" },
 ];
 
 const companyLinks = [
@@ -97,8 +97,10 @@ export default function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4 opacity-60">Service Areas</h3>
             <ul className="space-y-2">
               {serviceAreas.map((area) => (
-                <li key={area}>
-                  <span className="text-sm opacity-75">{area}, TX</span>
+                <li key={area.href}>
+                  <Link href={area.href} className="text-sm opacity-75 hover:opacity-100 transition-opacity">
+                    {area.label}, TX
+                  </Link>
                 </li>
               ))}
             </ul>
