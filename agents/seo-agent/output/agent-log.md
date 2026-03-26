@@ -72,3 +72,4 @@ Changes made:
 - site/app/gallery/page.tsx: Added BreadcrumbList JSON-LD
 - site/app/blog/page.tsx: Added BreadcrumbList JSON-LD
 - site/app/page.tsx: Added WebSite JSON-LD schema to improve branded search and sitelinks eligibility
+[2026-03-26] Run #3 complete. Deployed to production (site-kmcfks5da-brandon-7928s-projects.vercel.app). Build passed, all 31 pages generated successfully.
