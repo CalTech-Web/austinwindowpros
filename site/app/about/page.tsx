@@ -162,7 +162,7 @@ export default function AboutPage() {
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-10 text-center" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
             What Customers Say
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
               <div key={t.name + t.location + t.quote.slice(0, 20)} className="bg-gray-50 rounded-xl p-6">
                 <div className="flex mb-3" style={{ color: "#f59e0b" }}>

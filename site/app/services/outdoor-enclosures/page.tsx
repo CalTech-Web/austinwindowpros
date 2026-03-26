@@ -124,7 +124,7 @@ export default function OutdoorEnclosuresPage() {
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-10 text-center" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
             Outdoor Enclosure Options
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {enclosureTypes.map((e) => (
               <div key={e.name} className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
                 <h3 className="font-bold text-lg mb-3" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>{e.name}</h3>

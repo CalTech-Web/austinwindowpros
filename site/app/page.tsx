@@ -245,7 +245,7 @@ export default function HomePage() {
                 Call (512) 422-1907
               </a>
             </div>
-            <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap gap-x-8 gap-y-3">
+            <div className="mt-8 pt-6 border-t border-white/20 flex flex-nowrap gap-x-6 gap-y-3">
               {[
                 "4.9\u2605 Google Rating",
                 "40+ Years Experience",
@@ -333,6 +333,7 @@ export default function HomePage() {
                   src={`/images/gallery/project-${String(n).padStart(2, "0")}.jpg`}
                   alt={`Austin Window Pros project ${n}`}
                   fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   className="object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>

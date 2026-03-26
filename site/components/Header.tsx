@@ -55,7 +55,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-1 whitespace-nowrap">
             {navLinks.map((link) =>
               link.children ? (
                 <div key={link.label} className="relative group">
@@ -100,7 +100,7 @@ export default function Header() {
             )}
             <Link
               href="/contact/"
-              className="ml-3 px-5 py-2 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              className="ml-3 px-5 py-2 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90 whitespace-nowrap"
               style={{ backgroundColor: "#3b82f6" }}
             >
               Get a Free Quote

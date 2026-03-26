@@ -168,6 +168,7 @@ export default function WindowReplacementPage() {
                   src={`/images/gallery/project-${String(n).padStart(2, "0")}.jpg`}
                   alt={`Austin Window Pros window project`}
                   fill
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 33vw"
                   className="object-cover"
                 />
               </div>

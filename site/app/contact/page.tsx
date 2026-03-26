@@ -131,7 +131,7 @@ export default function ContactPage() {
                   {["Austin", "Round Rock", "Cedar Park", "Pflugerville", "Leander", "Georgetown", "San Marcos", "Buda", "Kyle", "Lakeway", "Dripping Springs"].map((city) => (
                     <span
                       key={city}
-                      className="text-xs px-2 py-1 rounded"
+                      className="text-xs px-1.5 py-0.5 rounded"
                       style={{ backgroundColor: "#eff6ff", color: "#1a3a5c" }}
                     >
                       {city}

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import CtaBanner from "@/components/CtaBanner";
 
 export const metadata: Metadata = {
   title: "Service Areas | Window & Door Replacement Near Austin, TX",
@@ -177,7 +176,6 @@ export default function LocationsPage() {
         </div>
       </section>
 
-      <CtaBanner />
     </>
   );
 }
