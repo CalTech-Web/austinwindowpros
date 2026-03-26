@@ -3,6 +3,7 @@ import { Overpass, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 const overpass = Overpass({
   variable: "--font-overpass",
@@ -119,6 +120,20 @@ export default function RootLayout({
       lang="en"
       className={`${overpass.variable} ${poppins.variable}`}
     >
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX');
+          `}
+        </Script>
+      </head>
       <body className="min-h-screen flex flex-col">
         <script
           type="application/ld+json"
