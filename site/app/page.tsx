@@ -2,10 +2,44 @@ import Image from "next/image";
 import Link from "next/link";
 
 const stats = [
-  { value: "40+", label: "Years of Experience" },
-  { value: "4.9★", label: "Google Rating" },
-  { value: "1992", label: "Year Founded" },
-  { value: "1,000s", label: "Installations Completed" },
+  {
+    value: "40+",
+    label: "Years of Experience",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" strokeWidth={1.5} />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 7v5l3 3" />
+      </svg>
+    ),
+  },
+  {
+    value: "4.9★",
+    label: "Google Rating",
+    icon: (
+      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
+      </svg>
+    ),
+  },
+  {
+    value: "1992",
+    label: "Year Founded",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="17" rx="2" strokeWidth={1.5} />
+        <path strokeLinecap="round" strokeWidth={1.5} d="M3 9h18M8 2v4M16 2v4" />
+      </svg>
+    ),
+  },
+  {
+    value: "1,000s",
+    label: "Installations Completed",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      </svg>
+    ),
+  },
 ];
 
 const services = [
@@ -149,15 +183,18 @@ export default function HomePage() {
       </section>
 
       {/* Stats */}
-      <section className="bg-white border-b border-gray-100">
+      <section style={{ backgroundColor: "#f0f7ff" }} className="border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 divide-y-0 lg:divide-x lg:divide-blue-200 gap-y-8 lg:gap-y-0 text-center">
             {stats.map((s) => (
-              <div key={s.label}>
+              <div key={s.label} className="flex flex-col items-center gap-2 lg:px-6">
+                <div className="flex items-center justify-center w-11 h-11 rounded-full" style={{ backgroundColor: "#dbeafe", color: "#3b82f6" }}>
+                  {s.icon}
+                </div>
                 <div className="text-3xl font-extrabold" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
                   {s.value}
                 </div>
-                <div className="text-sm mt-1" style={{ color: "#6b7280" }}>{s.label}</div>
+                <div className="text-sm" style={{ color: "#6b7280" }}>{s.label}</div>
               </div>
             ))}
           </div>
