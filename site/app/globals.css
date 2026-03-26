@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-navy: #1a3a5c;
+  --color-sky: #3b82f6;
+  --color-gray-muted: #6b7280;
+  --font-heading: var(--font-overpass);
+  --font-body: var(--font-poppins);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  color: #171717;
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-overpass), system-ui, sans-serif;
+}
