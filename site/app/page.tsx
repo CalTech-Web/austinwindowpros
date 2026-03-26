@@ -332,7 +332,6 @@ export default function HomePage() {
                   src={`/images/gallery/project-${String(n).padStart(2, "0")}.jpg`}
                   alt={`Austin Window Pros project ${n}`}
                   fill
-                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   className="object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
