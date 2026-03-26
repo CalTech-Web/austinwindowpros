@@ -72,10 +72,10 @@ export default function AboutPage() {
                 Our Story
               </h2>
               <p className="mb-4 leading-relaxed" style={{ color: "#374151" }}>
-                Austin Window Pros was founded in 1992 by David Adams, a home improvement professional with roots in the industry going back to 1979. What began as a full-service remodeling company evolved into a focused window and door replacement specialist, serving Austin homeowners with the same personal attention and craftsmanship that David has always believed in.
+                David Adams started in the home improvement business in 1979, doing full remodels, decks, patio covers, and pretty much anything a house needed. By 1992, he had found his focus. Window and door replacement was the work that combined precision craftsmanship with real, visible results for homeowners. Austin Window Pros has been at it ever since.
               </p>
               <p className="mb-4 leading-relaxed" style={{ color: "#374151" }}>
-                David is not a salesman who hands your project off to a crew. He is personally involved from the first phone call through the final quality inspection. His philosophy is straightforward: offer high-quality products, install them professionally, and treat every customer with the respect and honesty they deserve.
+                David is not a salesman who hands your project off to a crew after the sale. He shows up for the consultation, walks through the measurement, and is accountable for the final result. That is not a marketing claim. It is how the company has operated for over 30 years, and it is why customers leave reviews saying the windows installed a decade ago still perform the same way they did on day one.
               </p>
               <blockquote className="border-l-4 pl-6 py-2 italic" style={{ borderColor: "#3b82f6", color: "#374151" }}>
                 &ldquo;With over 40 years in the home improvement business, we offer personal service to every customer from beginning to end. Our highest priority is customer service, which includes offering high quality products and professional installation to each consumer.&rdquo;

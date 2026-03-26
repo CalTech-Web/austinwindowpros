@@ -143,10 +143,10 @@ export default function HomePage() {
               Austin, TX &bull; Since 1992
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6" style={{ fontFamily: "var(--font-overpass)" }}>
-              Transform Your Home with Expert Window &amp; Door Replacement
+              Window &amp; Door Replacement Done Right, the First Time
             </h1>
             <p className="text-lg sm:text-xl opacity-90 mb-8 leading-relaxed">
-              Locally owned and operated since 1992. Over 40 years of experience. Thousands of happy homeowners across Austin and Central Texas.
+              David Adams started Austin Window Pros in 1992 and still shows up personally for every project. Custom measured windows and doors. Free quotes. No pressure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -209,7 +209,7 @@ export default function HomePage() {
               Our Services
             </h2>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: "#6b7280" }}>
-              From windows and doors to siding and outdoor living spaces, we handle every aspect of your home exterior.
+              Windows, doors, siding, and outdoor enclosures. Every project custom measured and professionally installed, typically in a single day.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -241,7 +241,7 @@ export default function HomePage() {
               Recent Projects
             </h2>
             <p className="text-lg" style={{ color: "#6b7280" }}>
-              Real window and door installations across Austin and Central Texas.
+              Over 170 real project photos from Austin homes. This is what the work actually looks like.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -277,7 +277,7 @@ export default function HomePage() {
               How It Works
             </h2>
             <p className="text-lg opacity-75 text-white">
-              Our simple 5-step process from first call to final inspection.
+              Five steps from first call to finished install. Most projects are done in a single day.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:items-start gap-6 lg:gap-0">
@@ -353,7 +353,7 @@ export default function HomePage() {
             Ready to Transform Your Home?
           </h2>
           <p className="text-lg mb-8" style={{ color: "#6b7280" }}>
-            Get a free, no-pressure consultation and quote from Austin&rsquo;s trusted window and door replacement experts. Financing options available.
+            David Adams has been doing this since 1992 and will come to your home, assess your windows and doors, and give you a straight quote. No pressure, no obligation. Financing options available.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
