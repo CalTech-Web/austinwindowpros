@@ -20,12 +20,71 @@ export const metadata: Metadata = {
 };
 
 const windowTypes = [
-  { name: "Double-Hung Windows", desc: "The most popular style. Both sashes slide up and down for easy cleaning and ventilation." },
-  { name: "Casement Windows", desc: "Hinged on one side and crank open outward, providing excellent ventilation and a clean look." },
-  { name: "Sliding Windows", desc: "Horizontal sashes that glide smoothly, ideal for wide openings and contemporary homes." },
-  { name: "Picture Windows", desc: "Fixed panes that frame outdoor views and flood rooms with natural light." },
-  { name: "Awning Windows", desc: "Hinged at the top and open outward, allowing fresh air even during light rain." },
-  { name: "Bay & Bow Windows", desc: "Extend outward from the exterior wall to create a dramatic architectural feature and extra interior space." },
+  {
+    name: "Double-Hung Windows",
+    desc: "The most popular style. Both sashes slide up and down for easy cleaning and ventilation.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="2" width="18" height="20" rx="1.5" strokeWidth={1.5} />
+        <line x1="3" y1="12" x2="21" y2="12" strokeWidth={1.5} strokeLinecap="round" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 7l3-3 3 3M9 17l3 3 3-3" />
+      </svg>
+    ),
+  },
+  {
+    name: "Casement Windows",
+    desc: "Hinged on one side and crank open outward, providing excellent ventilation and a clean look.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="2" width="18" height="20" rx="1.5" strokeWidth={1.5} />
+        <line x1="3" y1="12" x2="21" y2="12" strokeWidth={1} strokeLinecap="round" strokeDasharray="2 2" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 7l6 5-6 5" />
+      </svg>
+    ),
+  },
+  {
+    name: "Sliding Windows",
+    desc: "Horizontal sashes that glide smoothly, ideal for wide openings and contemporary homes.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="4" width="20" height="16" rx="1.5" strokeWidth={1.5} />
+        <line x1="12" y1="4" x2="12" y2="20" strokeWidth={1.5} strokeLinecap="round" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 12l-3 0M17 12l3 0M5 10l-3 2 3 2M19 10l3 2-3 2" />
+      </svg>
+    ),
+  },
+  {
+    name: "Picture Windows",
+    desc: "Fixed panes that frame outdoor views and flood rooms with natural light.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="3" width="20" height="18" rx="1.5" strokeWidth={1.5} />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 18l4-5 3 3 3-4 4 6" />
+        <circle cx="8" cy="9" r="1.5" strokeWidth={1.5} />
+      </svg>
+    ),
+  },
+  {
+    name: "Awning Windows",
+    desc: "Hinged at the top and open outward, allowing fresh air even during light rain.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="16" rx="1.5" strokeWidth={1.5} />
+        <line x1="3" y1="10" x2="21" y2="10" strokeWidth={1.5} strokeLinecap="round" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 10l1 6M17 10l-1 6M12 10v6" />
+      </svg>
+    ),
+  },
+  {
+    name: "Bay & Bow Windows",
+    desc: "Extend outward from the exterior wall to create a dramatic architectural feature and extra interior space.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2 18V9l4-5h12l4 5v9H2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2 9h4M18 9h4M6 9v9M18 9v9M10 9v9M14 9v9" />
+      </svg>
+    ),
+  },
 ];
 
 const materials = [
@@ -130,9 +189,14 @@ export default function WindowReplacementPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {windowTypes.map((w) => (
-              <div key={w.name} className="bg-white rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-bold text-base mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>{w.name}</h3>
-                <p className="text-sm" style={{ color: "#6b7280" }}>{w.desc}</p>
+              <div key={w.name} className="bg-white rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200 flex items-start gap-4">
+                <div className="flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>
+                  {w.icon}
+                </div>
+                <div>
+                  <h3 className="font-bold text-base mb-1.5" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>{w.name}</h3>
+                  <p className="text-sm" style={{ color: "#6b7280" }}>{w.desc}</p>
+                </div>
               </div>
             ))}
           </div>
