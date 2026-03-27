@@ -136,7 +136,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="hover:opacity-100 transition-opacity"
           >
-            Powered by Caltechweb
+            Built by Caltechweb
           </a>
         </div>
       </div>
