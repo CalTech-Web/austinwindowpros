@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 
@@ -59,8 +60,18 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {/* Hero */}
-      <section className="py-14" style={{ backgroundColor: "#1a3a5c" }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+      <section className="relative py-14 overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/gallery/project-10.jpg"
+            alt=""
+            fill
+            className="object-cover opacity-20"
+            priority
+            quality={40}
+          />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <nav className="text-sm mb-4 opacity-70">
             <Link href="/" className="hover:opacity-100">Home</Link>
             <span className="mx-2">/</span>
