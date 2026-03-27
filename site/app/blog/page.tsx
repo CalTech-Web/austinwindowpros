@@ -164,8 +164,18 @@ export default function BlogPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* Hero */}
-      <section className="py-14" style={{ backgroundColor: "#1a3a5c" }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+      <section className="relative py-14 overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/gallery/project-06.jpg"
+            alt=""
+            fill
+            className="object-cover opacity-20"
+            priority
+            quality={40}
+          />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <nav className="text-sm mb-4 opacity-70">
             <Link href="/" className="hover:opacity-100">Home</Link>
             <span className="mx-2">/</span>
@@ -185,13 +195,13 @@ export default function BlogPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
-              <article key={post.slug} className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="relative aspect-[16/9] bg-gray-100">
+              <article key={post.slug} className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
+                <div className="relative aspect-[16/9] bg-gray-100 overflow-hidden">
                   <Image
                     src={post.image}
                     alt={post.title}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
