@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import ServiceHero from "@/components/ServiceHero";
 import CtaBanner from "@/components/CtaBanner";
 
@@ -283,7 +284,7 @@ export default function WindowReplacementPage() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[5, 6, 7, 9, 10, 11].map((n) => (
-              <div key={n} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-200 group">
+              <Link key={n} href="/gallery/" className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-200 group block">
                 <Image
                   src={`/images/gallery/project-${String(n).padStart(2, "0")}.jpg`}
                   alt={`Austin Window Pros window project`}
@@ -291,13 +292,23 @@ export default function WindowReplacementPage() {
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: "rgba(26,58,92,0.55)" }}>
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: "rgba(26,58,92,0.55)" }}>
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
                   </svg>
+                  <span className="text-xs font-semibold tracking-wide uppercase text-white">View Gallery</span>
                 </div>
-              </div>
+              </Link>
             ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              href="/gallery/"
+              className="inline-flex items-center justify-center px-8 py-3 rounded-lg text-sm font-semibold border-2 transition-colors hover:bg-[#1a3a5c] hover:text-white"
+              style={{ borderColor: "#1a3a5c", color: "#1a3a5c" }}
+            >
+              View Full Gallery
+            </Link>
           </div>
         </div>
       </section>
