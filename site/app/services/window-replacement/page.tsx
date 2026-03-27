@@ -130,7 +130,7 @@ export default function WindowReplacementPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {windowTypes.map((w) => (
-              <div key={w.name} className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
+              <div key={w.name} className="bg-white rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200">
                 <h3 className="font-bold text-base mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>{w.name}</h3>
                 <p className="text-sm" style={{ color: "#6b7280" }}>{w.desc}</p>
               </div>
