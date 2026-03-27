@@ -201,7 +201,7 @@ export default function LeanderPage() {
           </h2>
           <div className="space-y-6">
             {faqSchema.mainEntity.map((item) => (
-              <div key={item.name} className="border-b border-gray-100 pb-6">
+              <div key={item.name} className="rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200">
                 <h3 className="font-semibold mb-2" style={{ color: "#1a3a5c" }}>{item.name}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: "#374151" }}>{item.acceptedAnswer.text}</p>
               </div>
