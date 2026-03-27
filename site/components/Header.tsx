@@ -58,24 +58,24 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-1 whitespace-nowrap">
             {navLinks.map((link) =>
               link.children ? (
-                <div key={link.label} className="relative group">
-                  <button
+                <div key={link.label} className="relative group"
+                  onMouseEnter={() => setServicesOpen(true)}
+                  onMouseLeave={() => setServicesOpen(false)}
+                >
+                  <Link
+                    href={link.href}
                     className="px-3 py-2 text-sm font-medium hover:opacity-90 flex items-center gap-1 transition-opacity"
-                    onMouseEnter={() => setServicesOpen(true)}
-                    onMouseLeave={() => setServicesOpen(false)}
                   >
                     {link.label}
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
-                  </button>
+                  </Link>
                   <div
                     className={`absolute top-full left-0 mt-1 w-52 rounded-lg shadow-xl overflow-hidden transition-all duration-150 ${
                       servicesOpen ? "opacity-100 visible" : "opacity-0 invisible"
                     }`}
                     style={{ backgroundColor: "#1a3a5c", border: "1px solid rgba(255,255,255,0.15)" }}
-                    onMouseEnter={() => setServicesOpen(true)}
-                    onMouseLeave={() => setServicesOpen(false)}
                   >
                     {link.children.map((child) => (
                       <Link
