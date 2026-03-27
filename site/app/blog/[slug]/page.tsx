@@ -344,6 +344,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     );
   }
 
+  const relatedPosts = Object.entries(posts)
+    .filter(([s]) => s !== slug)
+    .slice(0, 3);
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -452,6 +456,48 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </div>
         </div>
       </section>
+
+      {relatedPosts.length > 0 && (
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-extrabold mb-8" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+              More From the Blog
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {relatedPosts.map(([postSlug, relPost]) => (
+                <article key={postSlug} className="bg-white rounded-xl overflow-hidden border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 group">
+                  <div className="relative aspect-[16/9] bg-gray-100 overflow-hidden">
+                    <Image
+                      src={relPost.image}
+                      alt={relPost.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-xs font-semibold px-2 py-1 rounded" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>
+                        {relPost.category}
+                      </span>
+                      <span className="text-xs" style={{ color: "#6b7280" }}>{relPost.date}</span>
+                    </div>
+                    <h3 className="font-bold text-sm mb-3 leading-snug" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+                      {relPost.title}
+                    </h3>
+                    <Link
+                      href={`/blog/${postSlug}/`}
+                      className="inline-block text-xs font-semibold"
+                      style={{ color: "#3b82f6" }}
+                    >
+                      Read More &rarr;
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <CtaBanner />
     </>
