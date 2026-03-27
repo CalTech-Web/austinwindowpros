@@ -20,12 +20,80 @@ export const metadata: Metadata = {
 };
 
 const sidingTypes = [
-  { name: "Vinyl Siding", desc: "Low-maintenance, moisture-resistant, and available in dozens of colors. Options include vinyl shake, faux wood, and insulated vinyl." },
-  { name: "Fiber Cement Siding", desc: "Superior durability and weather resistance. Resists rot, pests, and fire while maintaining a realistic wood appearance." },
-  { name: "Wood Siding", desc: "Classic curb appeal with modern protective treatments. Available in clapboard, shiplap, and board-and-batten profiles." },
-  { name: "Stucco Siding", desc: "Traditional texture with excellent durability. Popular in Austin and Central Texas for its heat resistance." },
-  { name: "Stone Veneer Siding", desc: "The appearance of natural stone at a fraction of the cost and weight. Adds dramatic curb appeal to any home." },
-  { name: "Composite Siding", desc: "Combines the look of wood with the durability of engineered materials. Resists impact, moisture, and UV fading." },
+  {
+    name: "Vinyl Siding",
+    desc: "Low-maintenance, moisture-resistant, and available in dozens of colors. Options include vinyl shake, faux wood, and insulated vinyl.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2 6h20M2 10h20M2 14h20M2 18h20" />
+        <rect x="2" y="4" width="20" height="16" rx="1" strokeWidth={1.5} />
+      </svg>
+    ),
+  },
+  {
+    name: "Fiber Cement Siding",
+    desc: "Superior durability and weather resistance. Resists rot, pests, and fire while maintaining a realistic wood appearance.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 2l8 4v6c0 5-4 9-8 10C8 21 4 17 4 12V6l8-4z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4" />
+      </svg>
+    ),
+  },
+  {
+    name: "Wood Siding",
+    desc: "Classic curb appeal with modern protective treatments. Available in clapboard, shiplap, and board-and-batten profiles.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v4M8 5c0 4 4 7 4 7s4-3 4-7" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 12v9M14 12v9M7 21h10" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 15h4" />
+      </svg>
+    ),
+  },
+  {
+    name: "Stucco Siding",
+    desc: "Traditional texture with excellent durability. Popular in Austin and Central Texas for its heat resistance.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="2" strokeWidth={1.5} />
+        <circle cx="7" cy="7" r="0.75" fill="currentColor" />
+        <circle cx="12" cy="7" r="0.75" fill="currentColor" />
+        <circle cx="17" cy="7" r="0.75" fill="currentColor" />
+        <circle cx="7" cy="12" r="0.75" fill="currentColor" />
+        <circle cx="12" cy="12" r="0.75" fill="currentColor" />
+        <circle cx="17" cy="12" r="0.75" fill="currentColor" />
+        <circle cx="7" cy="17" r="0.75" fill="currentColor" />
+        <circle cx="12" cy="17" r="0.75" fill="currentColor" />
+        <circle cx="17" cy="17" r="0.75" fill="currentColor" />
+      </svg>
+    ),
+  },
+  {
+    name: "Stone Veneer Siding",
+    desc: "The appearance of natural stone at a fraction of the cost and weight. Adds dramatic curb appeal to any home.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="2" width="9" height="7" rx="1" strokeWidth={1.5} />
+        <rect x="13" y="2" width="9" height="7" rx="1" strokeWidth={1.5} />
+        <rect x="2" y="11" width="5" height="7" rx="1" strokeWidth={1.5} />
+        <rect x="9" y="11" width="7" height="7" rx="1" strokeWidth={1.5} />
+        <rect x="18" y="11" width="4" height="7" rx="1" strokeWidth={1.5} />
+        <rect x="2" y="20" width="20" height="2" rx="1" strokeWidth={0} fill="currentColor" opacity="0.3" />
+      </svg>
+    ),
+  },
+  {
+    name: "Composite Siding",
+    desc: "Combines the look of wood with the durability of engineered materials. Resists impact, moisture, and UV fading.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="4" width="20" height="4" rx="1" strokeWidth={1.5} />
+        <rect x="2" y="10" width="20" height="4" rx="1" strokeWidth={1.5} />
+        <rect x="2" y="16" width="20" height="4" rx="1" strokeWidth={1.5} />
+      </svg>
+    ),
+  },
 ];
 
 const sidingFaqs = [
@@ -117,9 +185,14 @@ export default function SidingPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {sidingTypes.map((s) => (
-              <div key={s.name} className="bg-white rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-bold text-base mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>{s.name}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>{s.desc}</p>
+              <div key={s.name} className="bg-white rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200 flex items-start gap-4">
+                <div className="flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>
+                  {s.icon}
+                </div>
+                <div>
+                  <h3 className="font-bold text-base mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>{s.name}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>{s.desc}</p>
+                </div>
               </div>
             ))}
           </div>

@@ -24,15 +24,40 @@ const doorTypes = [
   {
     name: "Entry Doors",
     desc: "Fiberglass, steel, and stainable wood entry doors with a wide array of hardware, glass inserts, and finish options.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="2" width="18" height="22" rx="1.5" strokeWidth={1.5} />
+        <circle cx="16" cy="13" r="1" strokeWidth={1.5} fill="currentColor" />
+        <line x1="3" y1="2" x2="3" y2="24" strokeWidth={0} />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 2v20" />
+      </svg>
+    ),
   },
   {
     name: "Sliding Patio Doors",
     desc: "Smooth-gliding patio doors with Energy Star glass, custom sizing, and multi-point locking systems.",
     link: "/services/patio-door/",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="22" rx="1.5" strokeWidth={1.5} />
+        <line x1="12" y1="2" x2="12" y2="24" strokeWidth={1.5} strokeLinecap="round" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 13l-3 0M5 11l-3 2 3 2" />
+        <circle cx="15" cy="13" r="1" strokeWidth={1.5} fill="currentColor" />
+      </svg>
+    ),
   },
   {
     name: "French Patio Doors",
     desc: "Classic hinged doors, both inswing and outswing, with modern fiberglass and composite jambs.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="22" rx="1.5" strokeWidth={1.5} />
+        <line x1="12" y1="2" x2="12" y2="24" strokeWidth={1.5} strokeLinecap="round" />
+        <circle cx="9.5" cy="13" r="1" strokeWidth={1.5} fill="currentColor" />
+        <circle cx="14.5" cy="13" r="1" strokeWidth={1.5} fill="currentColor" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 13l-2 0M15 13l2 0" />
+      </svg>
+    ),
   },
 ];
 
@@ -127,14 +152,19 @@ export default function DoorReplacementPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {doorTypes.map((d) => (
-              <div key={d.name} className="bg-white rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-bold text-lg mb-3" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>{d.name}</h3>
-                <p className="text-sm mb-4" style={{ color: "#6b7280" }}>{d.desc}</p>
-                {d.link && (
-                  <Link href={d.link} className="text-sm font-semibold" style={{ color: "#3b82f6" }}>
-                    Learn more about patio doors &rarr;
-                  </Link>
-                )}
+              <div key={d.name} className="bg-white rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200 flex items-start gap-4">
+                <div className="flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>
+                  {d.icon}
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-3" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>{d.name}</h3>
+                  <p className="text-sm mb-4" style={{ color: "#6b7280" }}>{d.desc}</p>
+                  {d.link && (
+                    <Link href={d.link} className="text-sm font-semibold" style={{ color: "#3b82f6" }}>
+                      Learn more about patio doors &rarr;
+                    </Link>
+                  )}
+                </div>
               </div>
             ))}
           </div>

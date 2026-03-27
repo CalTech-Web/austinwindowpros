@@ -23,18 +23,56 @@ const enclosureTypes = [
   {
     name: "Covered Patios",
     desc: "Solid roof patio covers protect your family and outdoor furniture from Austin rain and intense summer sun. Choose from insulated panels, wood, and aluminum options.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9l9-7 9 7" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2 9h20" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 9v11h14V9" />
+        <line x1="9" y1="9" x2="9" y2="20" strokeWidth={1.5} strokeLinecap="round" />
+        <line x1="15" y1="9" x2="15" y2="20" strokeWidth={1.5} strokeLinecap="round" />
+      </svg>
+    ),
   },
   {
     name: "Pergolas & Shade Structures",
     desc: "Open-beam pergolas and louvered shade structures provide stylish relief from the Texas heat whether you are poolside or relaxing on the patio.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <line x1="4" y1="5" x2="20" y2="5" strokeWidth={1.5} strokeLinecap="round" />
+        <line x1="7" y1="5" x2="7" y2="9" strokeWidth={1.5} strokeLinecap="round" />
+        <line x1="12" y1="5" x2="12" y2="9" strokeWidth={1.5} strokeLinecap="round" />
+        <line x1="17" y1="5" x2="17" y2="9" strokeWidth={1.5} strokeLinecap="round" />
+        <line x1="2" y1="9" x2="22" y2="9" strokeWidth={2} strokeLinecap="round" />
+        <line x1="5" y1="9" x2="5" y2="20" strokeWidth={1.5} strokeLinecap="round" />
+        <line x1="19" y1="9" x2="19" y2="20" strokeWidth={1.5} strokeLinecap="round" />
+        <line x1="3" y1="20" x2="21" y2="20" strokeWidth={1.5} strokeLinecap="round" />
+      </svg>
+    ),
   },
   {
     name: "Screened Porches",
     desc: "Enjoy the outdoors without the bugs. Our screened porch enclosures use durable frames and fine mesh screening that holds up to the Texas climate.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="1.5" strokeWidth={1.5} />
+        <line x1="8" y1="2" x2="8" y2="22" strokeWidth={1} strokeLinecap="round" />
+        <line x1="14" y1="2" x2="14" y2="22" strokeWidth={1} strokeLinecap="round" />
+        <line x1="2" y1="8" x2="22" y2="8" strokeWidth={1} strokeLinecap="round" />
+        <line x1="2" y1="14" x2="22" y2="14" strokeWidth={1} strokeLinecap="round" />
+      </svg>
+    ),
   },
   {
     name: "Sunrooms",
     desc: "Three-season or year-round sunrooms bring the outdoors inside. All-glass walls and roofs maximize natural light while keeping weather, bugs, and pollen out.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="10" r="3" strokeWidth={1.5} />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 2v2M12 16v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 10h2M20 10h2M4.22 15.78l1.42-1.42M18.36 1.64l1.42 1.42" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 20h16" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 20V14h12v6" />
+      </svg>
+    ),
   },
 ];
 
@@ -127,9 +165,14 @@ export default function OutdoorEnclosuresPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {enclosureTypes.map((e) => (
-              <div key={e.name} className="bg-white rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-bold text-lg mb-3" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>{e.name}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>{e.desc}</p>
+              <div key={e.name} className="bg-white rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200 flex items-start gap-4">
+                <div className="flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>
+                  {e.icon}
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-3" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>{e.name}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>{e.desc}</p>
+                </div>
               </div>
             ))}
           </div>
