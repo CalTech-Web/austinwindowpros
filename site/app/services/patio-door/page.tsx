@@ -118,28 +118,52 @@ export default function PatioDoorPage() {
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl sm:text-3xl font-extrabold mb-10 text-center" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+            Patio Door Types We Install
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-              <h3 className="text-xl font-bold mb-4" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
-                Sliding Patio Doors
-              </h3>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "#6b7280" }}>
-                Most Austin back yard connections are a sliding glass door, and the hardware is usually what goes first. The rollers wear, the track corrodes, and a door that once glided easily starts dragging in summer heat. We replace sliding patio doors with precision-roller units custom sized to your exact opening, with Energy Star glass rated for the Texas Southern climate zone.
-              </p>
-              <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>
-                Integrated screen track is included. Multi-point locking systems available on request.
-              </p>
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 border-l-4 border-l-[#3b82f6] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex items-start gap-5">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="22" rx="1.5" strokeWidth={1.5} />
+                  <line x1="12" y1="2" x2="12" y2="24" strokeWidth={1.5} strokeLinecap="round" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 13l-3 0M5 11l-3 2 3 2" />
+                  <circle cx="15" cy="13" r="1" strokeWidth={1.5} fill="currentColor" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-4" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+                  Sliding Patio Doors
+                </h3>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: "#6b7280" }}>
+                  Most Austin back yard connections are a sliding glass door, and the hardware is usually what goes first. The rollers wear, the track corrodes, and a door that once glided easily starts dragging in summer heat. We replace sliding patio doors with precision-roller units custom sized to your exact opening, with Energy Star glass rated for the Texas Southern climate zone.
+                </p>
+                <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>
+                  Integrated screen track is included. Multi-point locking systems available on request.
+                </p>
+              </div>
             </div>
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-              <h3 className="text-xl font-bold mb-4" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
-                French Patio Doors
-              </h3>
-              <p className="text-sm leading-relaxed mb-4" style={{ color: "#6b7280" }}>
-                French doors work best when the rough opening is wide enough for the symmetrical panel layout, typically 72 inches or wider. Both inswing and outswing configurations are available. Fiberglass and composite jambs hold up to Austin heat without the repainting cycle that comes with wood frames.
-              </p>
-              <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>
-                Glass insert options from narrow sidelite to full decorative panels, all with Low-E and Energy Star qualification available.
-              </p>
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 border-l-4 border-l-[#3b82f6] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex items-start gap-5">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="22" rx="1.5" strokeWidth={1.5} />
+                  <line x1="12" y1="2" x2="12" y2="24" strokeWidth={1.5} strokeLinecap="round" />
+                  <circle cx="9.5" cy="13" r="1" strokeWidth={1.5} fill="currentColor" />
+                  <circle cx="14.5" cy="13" r="1" strokeWidth={1.5} fill="currentColor" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 13l-2 0M15 13l2 0" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-4" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+                  French Patio Doors
+                </h3>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: "#6b7280" }}>
+                  French doors work best when the rough opening is wide enough for the symmetrical panel layout, typically 72 inches or wider. Both inswing and outswing configurations are available. Fiberglass and composite jambs hold up to Austin heat without the repainting cycle that comes with wood frames.
+                </p>
+                <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>
+                  Glass insert options from narrow sidelite to full decorative panels, all with Low-E and Energy Star qualification available.
+                </p>
+              </div>
             </div>
           </div>
         </div>
