@@ -498,12 +498,21 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-extrabold mb-4" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+      <section className="relative py-20 overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/gallery/project-11.jpg"
+            alt="Austin window installation project"
+            fill
+            className="object-cover opacity-15"
+            quality={40}
+          />
+        </div>
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 text-white" style={{ fontFamily: "var(--font-overpass)" }}>
             Ready to Transform Your Home?
           </h2>
-          <p className="text-lg mb-8" style={{ color: "#6b7280" }}>
+          <p className="text-lg mb-8 opacity-85 text-white">
             David Adams has been doing this since 1992 and will come to your home, assess your windows and doors, and give you a straight quote. No pressure, no obligation. Financing options available.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -516,8 +525,7 @@ export default function HomePage() {
             </Link>
             <a
               href="tel:5124221907"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-lg text-base font-semibold border-2 hover:bg-[#1a3a5c] hover:text-white transition-colors"
-              style={{ borderColor: "#1a3a5c", color: "#1a3a5c" }}
+              className="inline-flex items-center justify-center px-8 py-4 rounded-lg text-base font-semibold border-2 border-white text-white hover:bg-white hover:text-[#1a3a5c] transition-colors"
             >
               Call (512) 422-1907
             </a>
