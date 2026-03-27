@@ -240,8 +240,8 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           <HeroSlideshow />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white text-center">
-          <div className="max-w-3xl mx-auto">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white">
+          <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-widest mb-3" style={{ color: "#93c5fd" }}>
               Austin, TX &bull; Since 1992
             </p>
@@ -251,7 +251,7 @@ export default function HomePage() {
             <p className="text-lg sm:text-xl opacity-90 mb-8 leading-relaxed">
               David Adams started Austin Window Pros in 1992 and still shows up personally for every project. Custom measured windows and doors. Free quotes. No pressure.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact/"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-lg text-base font-semibold text-white transition-opacity hover:opacity-90"
@@ -266,7 +266,7 @@ export default function HomePage() {
                 Call (512) 422-1907
               </a>
             </div>
-            <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap justify-center gap-x-6 gap-y-3">
+            <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap gap-x-6 gap-y-3">
               {[
                 "4.9\u2605 Google Rating",
                 "40+ Years Experience",

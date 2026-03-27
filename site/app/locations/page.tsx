@@ -99,7 +99,7 @@ export default function LocationsPage() {
       <section className="relative overflow-hidden min-h-[400px] flex items-center" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/gallery/project-05.jpg"
+            src="/images/gallery/20210301_152221.jpg"
             alt="Window installation project in Austin TX"
             fill
             className="object-cover opacity-20"

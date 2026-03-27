@@ -167,7 +167,7 @@ export default function BlogPage() {
       <section className="relative min-h-[400px] flex items-center overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/gallery/project-06.jpg"
+            src="/images/gallery/20250115_091939.jpg"
             alt=""
             fill
             className="object-cover opacity-20"

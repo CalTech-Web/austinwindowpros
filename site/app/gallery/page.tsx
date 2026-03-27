@@ -41,7 +41,7 @@ export default function GalleryPage() {
       <section className="relative min-h-[400px] flex items-center overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/gallery/project-05.jpg"
+            src="/images/gallery/winpro-image-210.jpg"
             alt=""
             fill
             className="object-cover opacity-20"

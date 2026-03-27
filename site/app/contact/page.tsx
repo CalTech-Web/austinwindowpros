@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
+import FaqAccordion from "@/components/FaqAccordion";
 
 export const metadata: Metadata = {
   title: "Contact Us | Get a Free Quote",
@@ -63,7 +64,7 @@ export default function ContactPage() {
       <section className="relative min-h-[400px] flex items-center overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/gallery/project-10.jpg"
+            src="/images/gallery/20220309_140536.jpg"
             alt=""
             fill
             className="object-cover opacity-20"
@@ -197,19 +198,13 @@ export default function ContactPage() {
       {/* FAQ */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-extrabold mb-10 text-center" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-6">
-            {faqs.map((faq) => (
-              <div key={faq.q} className="rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200">
-                <h3 className="font-bold text-base mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
-                  {faq.q}
-                </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>{faq.a}</p>
-              </div>
-            ))}
+          <div className="text-center mb-10">
+            <span className="text-sm font-semibold uppercase tracking-widest" style={{ color: "#3b82f6" }}>Got Questions?</span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold mt-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+              Frequently Asked Questions
+            </h2>
           </div>
+          <FaqAccordion faqs={faqs} />
         </div>
       </section>
     </>

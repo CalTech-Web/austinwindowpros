@@ -407,7 +407,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             quality={40}
           />
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <nav className="text-sm mb-4 opacity-70">
             <Link href="/" className="hover:opacity-100">Home</Link>
             <span className="mx-2">/</span>
@@ -426,78 +426,114 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </section>
 
       <section className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            className="prose prose-sm max-w-none"
-            style={{ color: "#374151" }}
-            dangerouslySetInnerHTML={{ __html: post.body }}
-          />
-          {/* Author bio */}
-          <div className="mt-10 rounded-xl p-6 border border-gray-100 shadow-sm flex gap-5 items-start" style={{ backgroundColor: "#f8fafc" }}>
-            <div className="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-xl" style={{ backgroundColor: "#1a3a5c" }}>
-              DA
-            </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12">
+            {/* Main content */}
             <div>
-              <p className="font-bold text-sm mb-0.5" style={{ color: "#1a3a5c" }}>David Adams</p>
-              <p className="text-xs mb-2" style={{ color: "#6b7280" }}>Founder &amp; Owner, Austin Window Pros</p>
-              <p className="text-sm leading-relaxed" style={{ color: "#374151" }}>
-                David Adams started in the home improvement business in 1979 and founded Austin Window Pros in 1992. He personally handles every consultation and has installed thousands of windows and doors across Austin and Central Texas.
-              </p>
-              <Link href="/about/" className="inline-block mt-2 text-xs font-semibold" style={{ color: "#3b82f6" }}>
-                About Austin Window Pros &rarr;
-              </Link>
-            </div>
-          </div>
+              <div
+                className="prose prose-sm max-w-none"
+                style={{ color: "#374151" }}
+                dangerouslySetInnerHTML={{ __html: post.body }}
+              />
+              {/* Author bio */}
+              <div className="mt-10 rounded-xl p-6 border border-gray-100 shadow-sm flex gap-5 items-start" style={{ backgroundColor: "#f8fafc" }}>
+                <div className="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-xl" style={{ backgroundColor: "#1a3a5c" }}>
+                  DA
+                </div>
+                <div>
+                  <p className="font-bold text-sm mb-0.5" style={{ color: "#1a3a5c" }}>David Adams</p>
+                  <p className="text-xs mb-2" style={{ color: "#6b7280" }}>Founder &amp; Owner, Austin Window Pros</p>
+                  <p className="text-sm leading-relaxed" style={{ color: "#374151" }}>
+                    David Adams started in the home improvement business in 1979 and founded Austin Window Pros in 1992. He personally handles every consultation and has installed thousands of windows and doors across Austin and Central Texas.
+                  </p>
+                  <Link href="/about/" className="inline-block mt-2 text-xs font-semibold" style={{ color: "#3b82f6" }}>
+                    About Austin Window Pros &rarr;
+                  </Link>
+                </div>
+              </div>
 
-          <div className="mt-6 pt-6 border-t border-gray-100">
-            <Link href="/blog/" className="text-sm font-semibold" style={{ color: "#3b82f6" }}>
-              &larr; Back to Blog
-            </Link>
+              <div className="mt-6 pt-6 border-t border-gray-100">
+                <Link href="/blog/" className="text-sm font-semibold" style={{ color: "#3b82f6" }}>
+                  &larr; Back to Blog
+                </Link>
+              </div>
+            </div>
+
+            {/* Sidebar */}
+            <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
+              {/* CTA Card */}
+              <div className="rounded-xl p-6 text-white" style={{ backgroundColor: "#1a3a5c" }}>
+                <h3 className="font-bold text-lg mb-2" style={{ fontFamily: "var(--font-overpass)" }}>
+                  Free Quote
+                </h3>
+                <p className="text-sm opacity-80 mb-4">
+                  Get a no-pressure estimate for your window or door project.
+                </p>
+                <Link
+                  href="/contact/"
+                  className="block text-center px-5 py-2.5 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  style={{ backgroundColor: "#3b82f6" }}
+                >
+                  Get Started
+                </Link>
+                <a
+                  href="tel:5124221907"
+                  className="block text-center mt-2 text-sm font-semibold opacity-80 hover:opacity-100"
+                >
+                  (512) 422-1907
+                </a>
+              </div>
+
+              {/* Related Posts */}
+              {relatedPosts.length > 0 && (
+                <div className="rounded-xl p-6 border border-gray-100 shadow-sm">
+                  <h3 className="font-bold text-sm mb-4" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+                    Related Articles
+                  </h3>
+                  <div className="space-y-4">
+                    {relatedPosts.slice(0, 3).map(([postSlug, relPost]) => (
+                      <Link key={postSlug} href={`/blog/${postSlug}/`} className="flex gap-3 group">
+                        <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100">
+                          <Image src={relPost.image} alt={relPost.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" sizes="64px" />
+                        </div>
+                        <div>
+                          <p className="text-xs font-bold leading-snug group-hover:underline" style={{ color: "#1a3a5c" }}>
+                            {relPost.title}
+                          </p>
+                          <p className="text-xs mt-1" style={{ color: "#6b7280" }}>{relPost.date}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Services */}
+              <div className="rounded-xl p-6 border border-gray-100 shadow-sm">
+                <h3 className="font-bold text-sm mb-3" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+                  Our Services
+                </h3>
+                <ul className="space-y-2">
+                  {[
+                    { label: "Window Replacement", href: "/services/window-replacement/" },
+                    { label: "Door Replacement", href: "/services/door-replacement/" },
+                    { label: "Patio Doors", href: "/services/patio-door/" },
+                    { label: "Siding", href: "/services/siding/" },
+                    { label: "Outdoor Enclosures", href: "/services/outdoor-enclosures/" },
+                  ].map((s) => (
+                    <li key={s.href}>
+                      <Link href={s.href} className="text-sm hover:underline" style={{ color: "#3b82f6" }}>
+                        {s.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
 
-      {relatedPosts.length > 0 && (
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-extrabold mb-8" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
-              More From the Blog
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {relatedPosts.map(([postSlug, relPost]) => (
-                <article key={postSlug} className="bg-white/70 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 group">
-                  <div className="relative aspect-[16/9] bg-gray-100 overflow-hidden">
-                    <Image
-                      src={relPost.image}
-                      alt={relPost.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="text-xs font-semibold px-2 py-1 rounded" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>
-                        {relPost.category}
-                      </span>
-                      <span className="text-xs" style={{ color: "#6b7280" }}>{relPost.date}</span>
-                    </div>
-                    <h3 className="font-bold text-sm mb-3 leading-snug" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
-                      {relPost.title}
-                    </h3>
-                    <Link
-                      href={`/blog/${postSlug}/`}
-                      className="inline-block text-xs font-semibold"
-                      style={{ color: "#3b82f6" }}
-                    >
-                      Read More &rarr;
-                    </Link>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       <CtaBanner />
     </>
