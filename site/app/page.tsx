@@ -328,23 +328,30 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
-              <div key={n} className="relative aspect-square rounded-lg overflow-hidden bg-gray-100">
+              <Link key={n} href="/gallery/" className="relative aspect-square rounded-lg overflow-hidden bg-gray-100 group block">
                 <Image
                   src={`/images/gallery/project-${String(n).padStart(2, "0")}.jpg`}
                   alt={`Austin Window Pros project ${n}`}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-              </div>
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: "rgba(26,58,92,0.55)" }}>
+                  <div className="flex flex-col items-center gap-1 text-white">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
+                    </svg>
+                    <span className="text-xs font-semibold tracking-wide uppercase">View Gallery</span>
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
           <div className="text-center mt-8">
             <Link
               href="/gallery/"
-              className="inline-flex items-center justify-center px-8 py-3 rounded-lg text-sm font-semibold border-2 transition-colors hover:text-white"
+              className="inline-flex items-center justify-center px-8 py-3 rounded-lg text-sm font-semibold border-2 transition-colors hover:bg-[#1a3a5c] hover:text-white"
               style={{ borderColor: "#1a3a5c", color: "#1a3a5c" }}
-              onMouseEnter={undefined}
             >
               View Full Gallery
             </Link>
