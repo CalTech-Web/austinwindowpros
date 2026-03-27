@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Home", href: "/" },
   {
     label: "Services",
-    href: "/services/window-replacement/",
+    href: "/services/",
     children: [
       { label: "Window Replacement", href: "/services/window-replacement/" },
       { label: "Door Replacement", href: "/services/door-replacement/" },
