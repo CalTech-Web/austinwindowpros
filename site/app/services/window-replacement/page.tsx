@@ -88,11 +88,61 @@ const windowTypes = [
 ];
 
 const materials = [
-  { name: "Vinyl", desc: "Low maintenance, moisture-resistant, and highly energy-efficient. Our most popular choice." },
-  { name: "Wood", desc: "Classic beauty with natural insulating properties. Ideal for traditional and historic homes." },
-  { name: "Aluminum Clad", desc: "Wood interior with aluminum exterior for a durable, weather-resistant finish." },
-  { name: "Aluminum Thermal Break", desc: "Commercial-grade durability with a thermal break to reduce heat transfer." },
-  { name: "Fiberglass Composite", desc: "The strongest and most dimensionally stable material. Resists warping, swelling, and rotting." },
+  {
+    name: "Vinyl",
+    desc: "Low maintenance, moisture-resistant, and highly energy-efficient. Our most popular choice.",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="3" width="20" height="18" rx="2" strokeWidth={1.5} />
+        <line x1="2" y1="10" x2="22" y2="10" strokeWidth={1.5} strokeLinecap="round" />
+        <line x1="2" y1="17" x2="22" y2="17" strokeWidth={1.5} strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    name: "Wood",
+    desc: "Classic beauty with natural insulating properties. Ideal for traditional and historic homes.",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3L7 11h4l-2 5h6l-2-5h4z" />
+        <line x1="12" y1="19" x2="12" y2="22" strokeWidth={1.5} strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    name: "Aluminum Clad",
+    desc: "Wood interior with aluminum exterior for a durable, weather-resistant finish.",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="3" width="20" height="18" rx="2" strokeWidth={1.5} />
+        <rect x="5" y="6" width="14" height="12" rx="1" strokeWidth={1.5} strokeDasharray="3 1.5" />
+      </svg>
+    ),
+  },
+  {
+    name: "Aluminum Thermal Break",
+    desc: "Commercial-grade durability with a thermal break to reduce heat transfer.",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="4" width="8" height="16" rx="1.5" strokeWidth={1.5} />
+        <rect x="14" y="4" width="8" height="16" rx="1.5" strokeWidth={1.5} />
+        <path strokeLinecap="round" strokeWidth={1.5} d="M10 10h4M10 14h4" />
+      </svg>
+    ),
+  },
+  {
+    name: "Fiberglass Composite",
+    desc: "The strongest and most dimensionally stable material. Resists warping, swelling, and rotting.",
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="2" strokeWidth={1.5} />
+        <line x1="9" y1="2" x2="9" y2="22" strokeWidth={1} strokeLinecap="round" />
+        <line x1="16" y1="2" x2="16" y2="22" strokeWidth={1} strokeLinecap="round" />
+        <line x1="2" y1="9" x2="22" y2="9" strokeWidth={1} strokeLinecap="round" />
+        <line x1="2" y1="16" x2="22" y2="16" strokeWidth={1} strokeLinecap="round" />
+      </svg>
+    ),
+  },
 ];
 
 const windowFaqs = [
@@ -204,16 +254,21 @@ export default function WindowReplacementPage() {
       </section>
 
       {/* Materials */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-10 text-center" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
             Frame Materials
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {materials.map((m) => (
-              <div key={m.name} className="bg-gray-50 rounded-xl p-5 text-center">
-                <h3 className="font-bold text-sm mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>{m.name}</h3>
-                <p className="text-xs leading-relaxed" style={{ color: "#6b7280" }}>{m.desc}</p>
+              <div key={m.name} className="bg-white rounded-xl p-4 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex items-start gap-3">
+                <div className="flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>
+                  {m.icon}
+                </div>
+                <div>
+                  <h3 className="font-bold text-sm mb-1" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>{m.name}</h3>
+                  <p className="text-xs leading-relaxed" style={{ color: "#6b7280" }}>{m.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -228,14 +283,19 @@ export default function WindowReplacementPage() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[5, 6, 7, 9, 10, 11].map((n) => (
-              <div key={n} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-200">
+              <div key={n} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-200 group">
                 <Image
                   src={`/images/gallery/project-${String(n).padStart(2, "0")}.jpg`}
                   alt={`Austin Window Pros window project`}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 33vw"
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundColor: "rgba(26,58,92,0.55)" }}>
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
+                  </svg>
+                </div>
               </div>
             ))}
           </div>
