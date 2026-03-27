@@ -180,7 +180,7 @@ export default function DrippingSpringsPage() {
               <Link
                 key={svc.href}
                 href={svc.href}
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 border-l-4 border-l-[#3b82f6] hover:shadow-md hover:-translate-y-1 transition-all duration-300"
               >
                 <h3 className="text-lg font-bold mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
                   {svc.title}
