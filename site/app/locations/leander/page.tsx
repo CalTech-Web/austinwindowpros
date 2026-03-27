@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
 
@@ -109,8 +110,16 @@ export default function LeanderPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
-      <section className="py-14" style={{ backgroundColor: "#1a3a5c" }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+      <section className="relative overflow-hidden py-14" style={{ backgroundColor: "#1a3a5c" }}>
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/gallery/project-12.jpg"
+            alt="Window installation project in Leander TX"
+            fill
+            className="object-cover opacity-20"
+          />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <nav className="text-sm mb-4 opacity-70">
             <Link href="/" className="hover:opacity-100">Home</Link>
             <span className="mx-2">/</span>
