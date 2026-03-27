@@ -195,7 +195,7 @@ export default function BlogPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
-              <article key={post.slug} className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
+              <article key={post.slug} className="bg-white rounded-xl overflow-hidden border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 group">
                 <div className="relative aspect-[16/9] bg-gray-100 overflow-hidden">
                   <Image
                     src={post.image}
