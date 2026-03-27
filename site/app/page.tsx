@@ -65,49 +65,28 @@ const services = [
     description:
       "Custom measured to your exact specifications. Energy-efficient double-pane glass in vinyl, wood, aluminum clad, and fiberglass composite.",
     href: "/services/window-replacement/",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <rect x="3" y="3" width="8" height="8" rx="1" strokeWidth={1.5} />
-        <rect x="13" y="3" width="8" height="8" rx="1" strokeWidth={1.5} />
-        <rect x="3" y="13" width="8" height="8" rx="1" strokeWidth={1.5} />
-        <rect x="13" y="13" width="8" height="8" rx="1" strokeWidth={1.5} />
-      </svg>
-    ),
+    image: "/images/gallery/project-03.jpg",
   },
   {
     title: "Door Replacement",
     description:
       "Entry doors, sliding patio doors, and French doors in fiberglass, metal, and stainable wood. Energy Star Qualified with Low-E glass.",
     href: "/services/door-replacement/",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 21h18M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16" />
-        <circle cx="15" cy="12" r="1" fill="currentColor" />
-      </svg>
-    ),
+    image: "/images/gallery/project-07.jpg",
   },
   {
     title: "Siding Installation",
     description:
       "Vinyl, fiber cement, wood, stucco, stone veneer, and composite siding. Low-maintenance options built to handle the Texas climate.",
     href: "/services/siding/",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
-    ),
+    image: "/images/gallery/project-14.jpg",
   },
   {
     title: "Outdoor Enclosures",
     description:
       "Covered patios, pergolas, screened porches, and sunrooms to expand your living space and escape the Texas heat in style.",
     href: "/services/outdoor-enclosures/",
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-        <polyline strokeWidth={1.5} points="9,22 9,12 15,12 15,22" />
-      </svg>
-    ),
+    image: "/images/gallery/project-21.jpg",
   },
 ];
 
@@ -299,16 +278,31 @@ export default function HomePage() {
               <Link
                 key={svc.href}
                 href={svc.href}
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow group"
+                className="relative rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow group block"
+                style={{ minHeight: "300px" }}
               >
-                <div className="mb-4 w-16 h-16 rounded-2xl flex items-center justify-center" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>{svc.icon}</div>
-                <h3 className="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
-                  {svc.title}
-                </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>{svc.description}</p>
-                <span className="inline-block mt-4 text-sm font-semibold" style={{ color: "#3b82f6" }}>
-                  Learn More &rarr;
-                </span>
+                <Image
+                  src={svc.image}
+                  alt={svc.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{ background: "linear-gradient(to top, rgba(26,58,92,0.95) 0%, rgba(26,58,92,0.55) 55%, rgba(26,58,92,0.1) 100%)" }}
+                />
+                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors" style={{ fontFamily: "var(--font-overpass)" }}>
+                    {svc.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed mb-4" style={{ color: "rgba(255,255,255,0.82)" }}>
+                    {svc.description}
+                  </p>
+                  <span className="inline-block text-sm font-semibold" style={{ color: "#93c5fd" }}>
+                    Learn More &rarr;
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
