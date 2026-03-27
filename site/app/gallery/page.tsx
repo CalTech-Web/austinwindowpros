@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
+import GalleryGrid from "@/components/GalleryGrid";
 
 export const metadata: Metadata = {
   title: "Window & Door Project Gallery",
@@ -71,27 +72,7 @@ export default function GalleryPage() {
       {/* Grid */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            {projects.map((p) => (
-              <div key={p.id} className="relative aspect-square rounded-lg overflow-hidden bg-gray-200 group">
-                <Image
-                  src={p.src}
-                  alt={p.alt}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                />
-                <div
-                  className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{ backgroundColor: "rgba(26,58,92,0.5)" }}
-                >
-                  <svg className="w-9 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z" />
-                  </svg>
-                </div>
-              </div>
-            ))}
-          </div>
+          <GalleryGrid projects={projects} />
         </div>
       </section>
 
