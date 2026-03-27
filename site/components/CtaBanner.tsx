@@ -1,9 +1,19 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function CtaBanner() {
   return (
-    <section className="py-14" style={{ backgroundColor: "#3b82f6" }}>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+    <section className="relative py-14 overflow-hidden" style={{ backgroundColor: "#3b82f6" }}>
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/gallery/project-20.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-[0.12]"
+          quality={40}
+        />
+      </div>
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
         <h2 className="text-2xl sm:text-3xl font-extrabold mb-3" style={{ fontFamily: "var(--font-overpass)" }}>
           Ready for a Free Consultation?
         </h2>
