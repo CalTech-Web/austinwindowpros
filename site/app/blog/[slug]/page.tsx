@@ -428,7 +428,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             style={{ color: "#374151" }}
             dangerouslySetInnerHTML={{ __html: post.body }}
           />
-          <div className="mt-10 pt-6 border-t border-gray-100">
+          {/* Author bio */}
+          <div className="mt-10 rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm flex gap-5 items-start" style={{ backgroundColor: "#f8fafc" }}>
+            <div className="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-xl" style={{ backgroundColor: "#1a3a5c" }}>
+              DA
+            </div>
+            <div>
+              <p className="font-bold text-sm mb-0.5" style={{ color: "#1a3a5c" }}>David Adams</p>
+              <p className="text-xs mb-2" style={{ color: "#6b7280" }}>Founder &amp; Owner, Austin Window Pros</p>
+              <p className="text-sm leading-relaxed" style={{ color: "#374151" }}>
+                David Adams started in the home improvement business in 1979 and founded Austin Window Pros in 1992. He personally handles every consultation and has installed thousands of windows and doors across Austin and Central Texas.
+              </p>
+              <Link href="/about/" className="inline-block mt-2 text-xs font-semibold" style={{ color: "#3b82f6" }}>
+                About Austin Window Pros &rarr;
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-6 pt-6 border-t border-gray-100">
             <Link href="/blog/" className="text-sm font-semibold" style={{ color: "#3b82f6" }}>
               &larr; Back to Blog
             </Link>
