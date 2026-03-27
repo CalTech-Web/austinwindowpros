@@ -172,17 +172,26 @@ export default function AboutPage() {
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-10 text-center" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
             What Customers Say
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials.map((t) => (
-              <div key={t.name + t.location + t.quote.slice(0, 20)} className="bg-gray-50 rounded-xl p-6">
-                <div className="flex mb-3" style={{ color: "#f59e0b" }}>
+              <div key={t.name + t.location + t.quote.slice(0, 20)} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 border-l-4 border-l-[#3b82f6] relative overflow-hidden hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                <span
+                  className="absolute -top-4 left-3 text-9xl font-serif leading-none pointer-events-none select-none"
+                  style={{ color: "#3b82f6", opacity: 0.1 }}
+                  aria-hidden="true"
+                >
+                  &ldquo;
+                </span>
+                <div className="flex mb-3 relative" style={{ color: "#f59e0b" }}>
                   {"★★★★★".split("").map((s, i) => <span key={i}>{s}</span>)}
                 </div>
-                <p className="text-sm leading-relaxed mb-4 italic" style={{ color: "#374151" }}>
+                <p className="text-sm leading-relaxed mb-4 italic relative" style={{ color: "#374151" }}>
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <p className="font-semibold text-sm" style={{ color: "#1a3a5c" }}>{t.name}</p>
-                <p className="text-xs" style={{ color: "#6b7280" }}>{t.location}</p>
+                <div className="relative">
+                  <p className="font-semibold text-sm" style={{ color: "#1a3a5c" }}>{t.name}</p>
+                  <p className="text-xs" style={{ color: "#6b7280" }}>{t.location}</p>
+                </div>
               </div>
             ))}
           </div>
