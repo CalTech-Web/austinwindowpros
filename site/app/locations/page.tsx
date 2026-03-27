@@ -133,11 +133,18 @@ export default function LocationsPage() {
             {locations.map((loc) => (
               <div
                 key={loc.city}
-                className="bg-gray-50 rounded-xl p-6 border border-gray-100"
+                className="bg-white rounded-xl p-6 border border-gray-100 border-l-4 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300"
+                style={{ borderLeftColor: "#3b82f6" }}
               >
-                <h3 className="text-lg font-bold mb-1" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
-                  {loc.city}, {loc.state}
-                </h3>
+                <div className="flex items-center gap-2 mb-2">
+                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="#3b82f6" viewBox="0 0 24 24" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <h3 className="text-lg font-bold" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
+                    {loc.city}, {loc.state}
+                  </h3>
+                </div>
                 <p className="text-sm leading-relaxed mb-4" style={{ color: "#6b7280" }}>{loc.description}</p>
                 {loc.href ? (
                   <Link href={loc.href} className="text-sm font-semibold" style={{ color: "#3b82f6" }}>
