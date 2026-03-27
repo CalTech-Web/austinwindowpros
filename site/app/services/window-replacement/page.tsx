@@ -89,6 +89,7 @@ export default function WindowReplacementPage() {
         title="Window Replacement in Austin, TX"
         subtitle="Custom measured windows installed by experienced professionals. Energy Star qualified double-pane glass to lower your utility bills year-round."
         breadcrumb="Window Replacement"
+        image="/images/gallery/project-03.jpg"
       />
 
       {/* Why replace */}

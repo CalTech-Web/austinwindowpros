@@ -81,6 +81,7 @@ export default function SidingPage() {
         title="Siding Installation in Austin, TX"
         subtitle="Transform your home's exterior with durable, beautiful siding. Vinyl, fiber cement, wood, stucco, and more, professionally installed by Austin's local experts."
         breadcrumb="Siding"
+        image="/images/gallery/project-14.jpg"
       />
 
       <section className="py-16 bg-white">

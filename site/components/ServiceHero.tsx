@@ -1,15 +1,29 @@
+import Image from "next/image";
 import Link from "next/link";
 
 interface ServiceHeroProps {
   title: string;
   subtitle: string;
   breadcrumb: string;
+  image?: string;
 }
 
-export default function ServiceHero({ title, subtitle, breadcrumb }: ServiceHeroProps) {
+export default function ServiceHero({ title, subtitle, breadcrumb, image }: ServiceHeroProps) {
   return (
-    <section className="py-16" style={{ backgroundColor: "#1a3a5c" }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+    <section className="relative py-16 overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
+      {image && (
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={image}
+            alt=""
+            fill
+            className="object-cover opacity-20"
+            priority
+            quality={40}
+          />
+        </div>
+      )}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
         <nav className="text-sm mb-4 opacity-70">
           <Link href="/" className="hover:opacity-100">Home</Link>
           <span className="mx-2">/</span>

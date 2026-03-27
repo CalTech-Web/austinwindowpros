@@ -91,6 +91,7 @@ export default function DoorReplacementPage() {
         title="Door Replacement in Austin, TX"
         subtitle="Beautiful, energy-efficient entry doors and patio doors installed by Austin's local experts. Energy Star Qualified with Low-E glass and manufacturer warranties."
         breadcrumb="Door Replacement"
+        image="/images/gallery/project-07.jpg"
       />
 
       <section className="py-16 bg-white">

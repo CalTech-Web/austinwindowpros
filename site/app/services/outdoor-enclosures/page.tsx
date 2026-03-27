@@ -91,6 +91,7 @@ export default function OutdoorEnclosuresPage() {
         title="Outdoor Enclosures in Austin, TX"
         subtitle="Covered patios, pergolas, screened porches, and sunrooms built for the Texas climate. Get outside in June. Stay out through October."
         breadcrumb="Outdoor Enclosures"
+        image="/images/gallery/project-21.jpg"
       />
 
       <section className="py-16 bg-white">

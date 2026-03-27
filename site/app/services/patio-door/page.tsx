@@ -73,6 +73,7 @@ export default function PatioDoorPage() {
         title="Patio Door Replacement Austin, TX"
         subtitle="Sliding and French patio doors with Energy Star glass, smooth operation, and custom sizing to fit your home perfectly."
         breadcrumb="Patio Doors"
+        image="/images/gallery/project-15.jpg"
       />
 
       <section className="py-16 bg-white">
