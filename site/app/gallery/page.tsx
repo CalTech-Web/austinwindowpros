@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
 import GalleryGrid from "@/components/GalleryGrid";
+import { galleryImages } from "@/data/gallery";
 
 export const metadata: Metadata = {
   title: "Window & Door Project Gallery",
@@ -29,12 +30,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const projects = Array.from({ length: 30 }, (_, i) => ({
-  id: i + 1,
-  src: `/images/gallery/project-${String(i + 1).padStart(2, "0")}.jpg`,
-  alt: `Austin Window Pros project ${i + 1}`,
-}));
-
 export default function GalleryPage() {
   return (
     <>
@@ -43,7 +38,7 @@ export default function GalleryPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* Hero */}
-      <section className="relative py-14 overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
+      <section className="relative min-h-[400px] flex items-center overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/gallery/project-05.jpg"
@@ -72,7 +67,7 @@ export default function GalleryPage() {
       {/* Grid */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <GalleryGrid projects={projects} />
+          <GalleryGrid images={galleryImages} />
         </div>
       </section>
 

@@ -151,7 +151,7 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
       {/* Hero */}
-      <section className="relative py-14 overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
+      <section className="relative min-h-[400px] flex items-center overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/gallery/project-25.jpg"
@@ -221,7 +221,7 @@ export default function AboutPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {differentiators.map((d, i) => (
-              <div key={i} className="flex items-start gap-4 bg-white rounded-xl p-5 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+              <div key={i} className="flex items-start gap-4 bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300">
                 <div className="flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>
                   {d.icon}
                 </div>
@@ -240,7 +240,7 @@ export default function AboutPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials.map((t) => (
-              <div key={t.name + t.location + t.quote.slice(0, 20)} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 border-l-4 border-l-[#3b82f6] relative overflow-hidden hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+              <div key={t.name + t.location + t.quote.slice(0, 20)} className="bg-white/70 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-gray-100 relative overflow-hidden hover:-translate-y-1 hover:shadow-md transition-all duration-300">
                 <span
                   className="absolute -top-4 left-3 text-9xl font-serif leading-none pointer-events-none select-none"
                   style={{ color: "#3b82f6", opacity: 0.1 }}

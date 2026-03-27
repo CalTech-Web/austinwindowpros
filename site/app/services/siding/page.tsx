@@ -166,7 +166,7 @@ export default function SidingPage() {
                 Austin Window Pros installs vinyl, fiber cement, wood, stucco, stone veneer, and composite siding. David Adams can look at your exterior, tell you honestly what is wearing and what is not, and put together pricing across two or three material options so you have something real to compare. Call (512) 422-1907 for a free walkthrough.
               </p>
             </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
               <Image
                 src="/images/gallery/project-19.jpg"
                 alt="Siding installation project in Austin Texas"
@@ -185,7 +185,7 @@ export default function SidingPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {sidingTypes.map((s) => (
-              <div key={s.name} className="bg-white rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200 flex items-start gap-4">
+              <div key={s.name} className="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200 flex items-start gap-4">
                 <div className="flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>
                   {s.icon}
                 </div>
@@ -207,7 +207,7 @@ export default function SidingPage() {
           </h2>
           <div className="space-y-6">
             {sidingFaqs.map((faq) => (
-              <div key={faq.q} className="rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200">
+              <div key={faq.q} className="rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200">
                 <h3 className="font-bold text-base mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
                   {faq.q}
                 </h3>

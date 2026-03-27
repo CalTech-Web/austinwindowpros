@@ -433,7 +433,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             dangerouslySetInnerHTML={{ __html: post.body }}
           />
           {/* Author bio */}
-          <div className="mt-10 rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm flex gap-5 items-start" style={{ backgroundColor: "#f8fafc" }}>
+          <div className="mt-10 rounded-xl p-6 border border-gray-100 shadow-sm flex gap-5 items-start" style={{ backgroundColor: "#f8fafc" }}>
             <div className="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-xl" style={{ backgroundColor: "#1a3a5c" }}>
               DA
             </div>
@@ -465,7 +465,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {relatedPosts.map(([postSlug, relPost]) => (
-                <article key={postSlug} className="bg-white rounded-xl overflow-hidden border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 group">
+                <article key={postSlug} className="bg-white/70 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 group">
                   <div className="relative aspect-[16/9] bg-gray-100 overflow-hidden">
                     <Image
                       src={relPost.image}

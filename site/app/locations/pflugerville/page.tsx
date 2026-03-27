@@ -180,7 +180,7 @@ export default function PflugervillePage() {
               <Link
                 key={svc.href}
                 href={svc.href}
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 border-l-4 border-l-[#3b82f6] hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                className="bg-white/70 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
               >
                 <h3 className="text-lg font-bold mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
                   {svc.title}
@@ -201,7 +201,7 @@ export default function PflugervillePage() {
           </h2>
           <div className="space-y-6">
             {faqSchema.mainEntity.map((item) => (
-              <div key={item.name} className="rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200">
+              <div key={item.name} className="rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200">
                 <h3 className="font-semibold mb-2" style={{ color: "#1a3a5c" }}>{item.name}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: "#374151" }}>{item.acceptedAnswer.text}</p>
               </div>

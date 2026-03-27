@@ -10,7 +10,7 @@ interface ServiceHeroProps {
 
 export default function ServiceHero({ title, subtitle, breadcrumb, image }: ServiceHeroProps) {
   return (
-    <section className="relative py-16 overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
+    <section className="relative min-h-[400px] flex items-center overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
       {image && (
         <div className="absolute inset-0 z-0">
           <Image

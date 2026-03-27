@@ -96,7 +96,7 @@ export default function LocationsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden py-14" style={{ backgroundColor: "#1a3a5c" }}>
+      <section className="relative overflow-hidden min-h-[400px] flex items-center" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/gallery/project-05.jpg"
@@ -133,8 +133,7 @@ export default function LocationsPage() {
             {locations.map((loc) => (
               <div
                 key={loc.city}
-                className="bg-white rounded-xl p-6 border border-gray-100 border-l-4 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300"
-                style={{ borderLeftColor: "#3b82f6" }}
+                className="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300"
               >
                 <div className="flex items-center gap-2 mb-2">
                   <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="#3b82f6" viewBox="0 0 24 24" strokeWidth={2}>

@@ -104,7 +104,7 @@ export default function PatioDoorPage() {
                 ))}
               </ul>
             </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
               <Image
                 src="/images/gallery/project-15.jpg"
                 alt="Patio door installation in Austin Texas"
@@ -122,7 +122,7 @@ export default function PatioDoorPage() {
             Patio Door Types We Install
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 border-l-4 border-l-[#3b82f6] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex items-start gap-5">
+            <div className="bg-white/70 backdrop-blur-sm rounded-xl p-8 shadow-sm border border-gray-100 hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex items-start gap-5">
               <div className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <rect x="2" y="2" width="20" height="22" rx="1.5" strokeWidth={1.5} />
@@ -143,7 +143,7 @@ export default function PatioDoorPage() {
                 </p>
               </div>
             </div>
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 border-l-4 border-l-[#3b82f6] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex items-start gap-5">
+            <div className="bg-white/70 backdrop-blur-sm rounded-xl p-8 shadow-sm border border-gray-100 hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex items-start gap-5">
               <div className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <rect x="2" y="2" width="20" height="22" rx="1.5" strokeWidth={1.5} />
@@ -177,7 +177,7 @@ export default function PatioDoorPage() {
           </h2>
           <div className="space-y-6">
             {patioDoorFaqs.map((faq) => (
-              <div key={faq.q} className="rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200">
+              <div key={faq.q} className="rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200">
                 <h3 className="font-bold text-base mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
                   {faq.q}
                 </h3>

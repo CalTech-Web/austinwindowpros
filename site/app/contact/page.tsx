@@ -60,7 +60,7 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {/* Hero */}
-      <section className="relative py-14 overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
+      <section className="relative min-h-[400px] flex items-center overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/gallery/project-10.jpg"
@@ -169,12 +169,21 @@ export default function ContactPage() {
                   We serve Austin and surrounding Central Texas communities.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["Austin", "Round Rock", "Cedar Park", "Pflugerville", "Leander", "Georgetown", "San Marcos", "Buda", "Kyle", "Lakeway", "Dripping Springs"].map((city) => (
+                  {["Austin", "Round Rock", "Cedar Park", "Pflugerville", "Leander", "Georgetown", "San Marcos", "Buda", "Kyle", "Lakeway", "Dripping Springs"].map((city, index) => (
                     <span
                       key={city}
-                      className="text-xs px-1.5 py-0.5 rounded"
+                      className="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full"
                       style={{ backgroundColor: "#eff6ff", color: "#1a3a5c" }}
                     >
+                      <svg
+                        className="w-3.5 h-3.5 flex-shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        style={{ animation: "pulse-marker 2s ease-in-out infinite", animationDelay: `${index * 0.15}s`, color: "#3b82f6" }}
+                      >
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+                      </svg>
                       {city}
                     </span>
                   ))}
@@ -193,7 +202,7 @@ export default function ContactPage() {
           </h2>
           <div className="space-y-6">
             {faqs.map((faq) => (
-              <div key={faq.q} className="rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200">
+              <div key={faq.q} className="rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200">
                 <h3 className="font-bold text-base mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
                   {faq.q}
                 </h3>

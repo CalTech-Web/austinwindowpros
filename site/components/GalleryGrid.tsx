@@ -1,25 +1,27 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import Image from "next/image";
+import type { Category, GalleryImage } from "@/data/gallery";
+import { categories } from "@/data/gallery";
 
-interface Project {
-  id: number;
-  src: string;
-  alt: string;
-}
-
-export default function GalleryGrid({ projects }: { projects: Project[] }) {
+export default function GalleryGrid({ images }: { images: GalleryImage[] }) {
+  const [activeCategory, setActiveCategory] = useState<Category>("all");
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const filtered = useMemo(
+    () => activeCategory === "all" ? images : images.filter((img) => img.category === activeCategory),
+    [images, activeCategory],
+  );
 
   const close = useCallback(() => setActiveIndex(null), []);
   const prev = useCallback(
-    () => setActiveIndex((i) => (i !== null && i > 0 ? i - 1 : projects.length - 1)),
-    [projects.length],
+    () => setActiveIndex((i) => (i !== null && i > 0 ? i - 1 : filtered.length - 1)),
+    [filtered.length],
   );
   const next = useCallback(
-    () => setActiveIndex((i) => (i !== null && i < projects.length - 1 ? i + 1 : 0)),
-    [projects.length],
+    () => setActiveIndex((i) => (i !== null && i < filtered.length - 1 ? i + 1 : 0)),
+    [filtered.length],
   );
 
   useEffect(() => {
@@ -37,13 +39,40 @@ export default function GalleryGrid({ projects }: { projects: Project[] }) {
     };
   }, [activeIndex, close, prev, next]);
 
+  // Reset lightbox when filter changes
+  useEffect(() => {
+    setActiveIndex(null);
+  }, [activeCategory]);
+
   return (
     <>
+      {/* Category Filter Tabs */}
+      <div className="flex flex-wrap gap-2 mb-8 justify-center">
+        {categories.map((cat) => (
+          <button
+            key={cat.value}
+            type="button"
+            onClick={() => setActiveCategory(cat.value)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${
+              activeCategory === cat.value
+                ? "text-white shadow-md"
+                : "bg-white text-gray-600 border border-gray-200 hover:border-blue-300 hover:text-blue-600"
+            }`}
+            style={activeCategory === cat.value ? { backgroundColor: "#1a3a5c" } : undefined}
+          >
+            {cat.label}
+            <span className="ml-1.5 text-xs opacity-70">
+              ({cat.value === "all" ? images.length : images.filter((img) => img.category === cat.value).length})
+            </span>
+          </button>
+        ))}
+      </div>
+
       {/* Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-        {projects.map((p, i) => (
+        {filtered.map((p, i) => (
           <button
-            key={p.id}
+            key={p.src}
             type="button"
             aria-label={`View ${p.alt}`}
             onClick={() => setActiveIndex(i)}
@@ -107,8 +136,8 @@ export default function GalleryGrid({ projects }: { projects: Project[] }) {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={projects[activeIndex].src}
-              alt={projects[activeIndex].alt}
+              src={filtered[activeIndex].src}
+              alt={filtered[activeIndex].alt}
               fill
               className="object-contain"
               sizes="90vw"
@@ -130,7 +159,7 @@ export default function GalleryGrid({ projects }: { projects: Project[] }) {
 
           {/* Counter */}
           <span className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-sm">
-            {activeIndex + 1} / {projects.length}
+            {activeIndex + 1} / {filtered.length}
           </span>
         </div>
       )}

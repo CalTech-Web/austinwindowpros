@@ -220,7 +220,7 @@ export default function WindowReplacementPage() {
                 Modern frames with multi-point locking systems are meaningfully more secure than the single-point locks found on windows from the 1990s. Curb appeal and resale value are genuine benefits as well, though they tend to be the last reason people call us. The energy savings usually close the argument first.
               </p>
             </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
               <Image
                 src="/images/gallery/project-03.jpg"
                 alt="Window replacement project in Austin Texas"
@@ -240,7 +240,7 @@ export default function WindowReplacementPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {windowTypes.map((w) => (
-              <div key={w.name} className="bg-white rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200 flex items-start gap-4">
+              <div key={w.name} className="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200 flex items-start gap-4">
                 <div className="flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>
                   {w.icon}
                 </div>
@@ -262,7 +262,7 @@ export default function WindowReplacementPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {materials.map((m) => (
-              <div key={m.name} className="bg-white rounded-xl p-4 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex items-start gap-3">
+              <div key={m.name} className="bg-white/70 backdrop-blur-sm rounded-xl p-4 border border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex items-start gap-3">
                 <div className="flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>
                   {m.icon}
                 </div>
@@ -284,7 +284,7 @@ export default function WindowReplacementPage() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[5, 6, 7, 9, 10, 11].map((n) => (
-              <Link key={n} href="/gallery/" className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-200 group block">
+              <Link key={n} href="/gallery/" className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg bg-gray-200 group block">
                 <Image
                   src={`/images/gallery/project-${String(n).padStart(2, "0")}.jpg`}
                   alt={`Austin Window Pros window project`}
@@ -321,7 +321,7 @@ export default function WindowReplacementPage() {
           </h2>
           <div className="space-y-6">
             {windowFaqs.map((faq) => (
-              <div key={faq.q} className="rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200">
+              <div key={faq.q} className="rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200">
                 <h3 className="font-bold text-base mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
                   {faq.q}
                 </h3>

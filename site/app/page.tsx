@@ -454,7 +454,7 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((t) => (
-              <div key={t.name} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 border-l-4 border-l-[#3b82f6] relative overflow-hidden hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+              <div key={t.name} className="bg-white/70 backdrop-blur-sm rounded-xl p-6 shadow-sm border border-gray-100 relative overflow-hidden hover:-translate-y-1 hover:shadow-md transition-all duration-300">
                 <span
                   className="absolute -top-4 left-3 text-9xl font-serif leading-none pointer-events-none select-none"
                   style={{ color: "#3b82f6", opacity: 0.1 }}

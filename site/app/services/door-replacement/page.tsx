@@ -133,7 +133,7 @@ export default function DoorReplacementPage() {
                 Austin Window Pros carries Therma-Tru, Neumadoors, and Masonite. Every door we install is Energy Star Qualified with Low-E glass and comes with manufacturer warranty coverage. We custom size entries and patio doors to your opening, so the fit is right the first time and you are not looking at visible gaps at the frame a year later.
               </p>
             </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
               <Image
                 src="/images/gallery/project-14.jpg"
                 alt="Door replacement project in Austin Texas"
@@ -152,7 +152,7 @@ export default function DoorReplacementPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {doorTypes.map((d) => (
-              <div key={d.name} className="bg-white rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200 flex items-start gap-4">
+              <div key={d.name} className="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200 flex items-start gap-4">
                 <div className="flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center" style={{ backgroundColor: "#eff6ff", color: "#3b82f6" }}>
                   {d.icon}
                 </div>
@@ -198,7 +198,7 @@ export default function DoorReplacementPage() {
           </h2>
           <div className="space-y-6">
             {doorFaqs.map((faq) => (
-              <div key={faq.q} className="rounded-xl p-6 border border-gray-100 border-l-4 border-l-[#3b82f6] shadow-sm hover:shadow-md transition-shadow duration-200">
+              <div key={faq.q} className="rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200">
                 <h3 className="font-bold text-base mb-2" style={{ color: "#1a3a5c", fontFamily: "var(--font-overpass)" }}>
                   {faq.q}
                 </h3>
