@@ -147,18 +147,21 @@ const testimonials = [
   {
     name: "Frank K.",
     location: "Austin, Texas",
+    initials: "FK",
     quote:
       "Dave replaced our drafty old windows for us recently and did an excellent job! He helped us pick out the right windows for a great price and we couldn't be happier with the work he has done. Thank You Window Pros!",
   },
   {
     name: "Brian G.",
     location: "Round Rock, Texas",
+    initials: "BG",
     quote:
       "Window Pros recently replaced all of our windows and our sliding back door in our Northwest Austin house. The service was professional and reliable, and we would easily recommend Window Pros in the future.",
   },
   {
     name: "Verified Customer",
     location: "Austin, Texas",
+    initials: null,
     quote:
       "From the first meeting, Dave demonstrated expertise and experience in selecting the right products. The crew showed up early, stayed late to complete the work in one day, and left nothing to clean up.",
   },
@@ -471,9 +474,22 @@ export default function HomePage() {
                 <p className="text-sm leading-relaxed mb-4 italic relative" style={{ color: "#374151" }}>
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <div className="relative">
-                  <p className="font-semibold text-sm" style={{ color: "#1a3a5c" }}>{t.name}</p>
-                  <p className="text-xs" style={{ color: "#6b7280" }}>{t.location}</p>
+                <div className="relative flex items-center gap-3">
+                  {t.initials ? (
+                    <div className="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold text-white" style={{ backgroundColor: "#1a3a5c" }}>
+                      {t.initials}
+                    </div>
+                  ) : (
+                    <div className="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center" style={{ backgroundColor: "#3b82f6" }}>
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                      </svg>
+                    </div>
+                  )}
+                  <div>
+                    <p className="font-semibold text-sm" style={{ color: "#1a3a5c" }}>{t.name}</p>
+                    <p className="text-xs" style={{ color: "#6b7280" }}>{t.location}</p>
+                  </div>
                 </div>
               </div>
             ))}
