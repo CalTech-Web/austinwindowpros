@@ -81,9 +81,18 @@ export default function ContactPage() {
           <h1 className="text-3xl sm:text-4xl font-extrabold mb-3" style={{ fontFamily: "var(--font-overpass)" }}>
             Get a Free Quote
           </h1>
-          <p className="text-lg opacity-90 max-w-2xl">
+          <p className="text-lg opacity-90 max-w-2xl mb-8">
             Contact Austin Window Pros today. No pressure, no obligation. We will assess your home and provide an honest, detailed quote.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a
+              href="tel:5124221907"
+              className="inline-flex items-center justify-center px-7 py-3 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              style={{ backgroundColor: "#3b82f6" }}
+            >
+              Call (512) 422-1907
+            </a>
+          </div>
         </div>
       </section>
 

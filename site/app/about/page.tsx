@@ -171,9 +171,24 @@ export default function AboutPage() {
           <h1 className="text-3xl sm:text-4xl font-extrabold mb-3" style={{ fontFamily: "var(--font-overpass)" }}>
             About Austin Window Pros
           </h1>
-          <p className="text-lg opacity-90 max-w-2xl">
+          <p className="text-lg opacity-90 max-w-2xl mb-8">
             Locally owned and operated in Austin, TX since 1992. Over 40 years of hands-on experience. Thousands of happy homeowners.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/contact/"
+              className="inline-flex items-center justify-center px-7 py-3 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              style={{ backgroundColor: "#3b82f6" }}
+            >
+              Get a Free Quote
+            </Link>
+            <a
+              href="tel:5124221907"
+              className="inline-flex items-center justify-center px-7 py-3 rounded-lg text-sm font-semibold border border-white/50 hover:border-white transition-colors"
+            >
+              (512) 422-1907
+            </a>
+          </div>
         </div>
       </section>
 

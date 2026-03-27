@@ -110,7 +110,7 @@ export default function BudaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden py-14" style={{ backgroundColor: "#1a3a5c" }}>
+      <section className="relative overflow-hidden min-h-[400px] flex items-center" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/gallery/project-17.jpg"

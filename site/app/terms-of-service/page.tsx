@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function TermsOfServicePage() {
   return (
     <>
-      <section className="py-14" style={{ backgroundColor: "#1a3a5c" }}>
+      <section className="min-h-[400px] flex items-center" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <nav className="text-sm mb-4 opacity-70">
             <Link href="/" className="hover:opacity-100">Home</Link>

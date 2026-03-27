@@ -396,7 +396,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <section className="relative py-14 overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
+      <section className="relative min-h-[400px] flex items-center overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="absolute inset-0 z-0">
           <Image
             src={post.image}
@@ -421,7 +421,22 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <h1 className="text-2xl sm:text-3xl font-extrabold mt-2 mb-2" style={{ fontFamily: "var(--font-overpass)" }}>
             {post.title}
           </h1>
-          <p className="text-sm opacity-70">{post.date}</p>
+          <p className="text-sm opacity-70 mb-6">{post.date}</p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/contact/"
+              className="inline-flex items-center justify-center px-7 py-3 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              style={{ backgroundColor: "#3b82f6" }}
+            >
+              Get a Free Quote
+            </Link>
+            <a
+              href="tel:5124221907"
+              className="inline-flex items-center justify-center px-7 py-3 rounded-lg text-sm font-semibold border border-white/50 hover:border-white transition-colors"
+            >
+              (512) 422-1907
+            </a>
+          </div>
         </div>
       </section>
 
