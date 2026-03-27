@@ -4,11 +4,11 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
 const slides = [
-  { src: "/images/gallery/project-13.jpg", alt: "Window installation project in Austin TX" },
-  { src: "/images/hero/hero-01.jpg", alt: "Custom window replacement by Austin Window Pros" },
-  { src: "/images/gallery/project-05.jpg", alt: "Residential window upgrade in Central Texas" },
-  { src: "/images/gallery/project-20.jpg", alt: "Professional door installation in Austin" },
-  { src: "/images/gallery/project-10.jpg", alt: "Energy efficient windows installed in Austin home" },
+  { src: "/images/hero/hero-slide-01.jpg", alt: "Window installation project in Austin TX" },
+  { src: "/images/hero/hero-slide-02.jpg", alt: "Custom window replacement by Austin Window Pros" },
+  { src: "/images/hero/hero-slide-03.jpg", alt: "Residential window upgrade in Central Texas" },
+  { src: "/images/hero/hero-slide-04.jpg", alt: "Professional door installation in Austin" },
+  { src: "/images/hero/hero-slide-05.jpg", alt: "Energy efficient windows installed in Austin home" },
 ];
 
 const DURATION = 6000;
