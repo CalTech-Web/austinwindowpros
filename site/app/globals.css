@@ -27,3 +27,16 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-overpass), system-ui, sans-serif;
 }
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.15);
+  }
+}
+
+@utility animate-hero-zoom {
+  animation: hero-zoom 6s ease-out forwards;
+}

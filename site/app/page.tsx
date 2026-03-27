@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import HeroSlideshow from "@/components/HeroSlideshow";
 
 export const metadata: Metadata = {
   title: "Austin Window Pros | Window & Door Replacement in Austin, TX",
@@ -237,14 +238,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative min-h-[600px] flex items-center overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/gallery/project-13.jpg"
-            alt="Window installation project in Austin TX"
-            fill
-            className="object-cover opacity-25"
-            priority
-            quality={45}
-          />
+          <HeroSlideshow />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white text-center">
           <div className="max-w-3xl mx-auto">

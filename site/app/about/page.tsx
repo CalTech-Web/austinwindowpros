@@ -198,13 +198,16 @@ export default function AboutPage() {
                 </cite>
               </blockquote>
             </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-              <Image
-                src="/images/gallery/project-25.jpg"
-                alt="Austin Window Pros team at work"
-                fill
-                className="object-cover"
-              />
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative w-72 sm:w-80 lg:w-96">
+                <Image
+                  src="/images/david-adams.webp"
+                  alt="David Adams, Founder and Owner of Austin Window Pros"
+                  width={600}
+                  height={720}
+                  className="rounded-xl"
+                />
+              </div>
             </div>
           </div>
         </div>
