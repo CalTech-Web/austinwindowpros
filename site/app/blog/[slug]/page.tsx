@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
 
-const posts: Record<string, { title: string; date: string; isoDate: string; category: string; description: string; body: string }> = {
+const posts: Record<string, { title: string; date: string; isoDate: string; category: string; description: string; image: string; body: string }> = {
   "casement-vs-double-hung-windows": {
     title: "Casement vs. Double-Hung Windows: Which Style Fits Your Austin Home",
     date: "March 27, 2026",
     isoDate: "2026-03-27",
     category: "Buying Guide",
     description: "Double-hung is the default. Casement windows solve specific problems double-hung cannot. Here is how to decide which style belongs in each room before you order.",
+    image: "/images/gallery/project-08.jpg",
     body: `
       <p>The default when replacing windows is double-hung. Same style as what was there before, familiar operation, widely available. Most of the time that is the right call. But casement windows solve specific problems that double-hung windows do not, and knowing the difference before you order saves you from fixing the right problem with the wrong window.</p>
       <h2>How Each Window Works</h2>
@@ -30,6 +32,7 @@ const posts: Record<string, { title: string; date: string; isoDate: string; cate
     isoDate: "2026-03-27",
     category: "Buying Guide",
     description: "One failed window raises the question about the rest. The answer depends on age, budget, and what a close look at the remaining windows actually shows.",
+    image: "/images/gallery/project-11.jpg",
     body: `
       <p>One window fails and the others look fine. You call for a quote on that one replacement and the contractor walks the house and says most of the other windows are not far behind. Now you have to decide how much to tackle at once. The right answer depends on your budget, how old the remaining windows are, and how long you plan to stay in the house.</p>
       <h2>The Case for Replacing Just One</h2>
@@ -49,6 +52,7 @@ const posts: Record<string, { title: string; date: string; isoDate: string; cate
     isoDate: "2026-03-26",
     category: "Buying Guide",
     description: "The lowest quote is not always the best value. Here is what to ask before signing, from insurance and crew accountability to warranty terms and measurement process.",
+    image: "/images/gallery/project-01.jpg",
     body: `
       <p>The fastest mistake is signing with the lowest quote before you understand what it does not include. Custom measurement or stock sizing? Who backs the warranty, the contractor or the manufacturer? How many windows per day does the crew actually install? These are answerable questions, and asking them separates solid contractors from the ones who get sloppy at installation.</p>
       <h2>Check Insurance First, Not Credentials</h2>
@@ -71,6 +75,7 @@ const posts: Record<string, { title: string; date: string; isoDate: string; cate
     isoDate: "2026-03-26",
     category: "Outdoor Enclosures",
     description: "Shade solves half the problem. Bug control solves most of it. Here is how to choose between a covered patio and a screened porch for an Austin back yard.",
+    image: "/images/gallery/project-20.jpg",
     body: `
       <p>By mid-June, the average Austin back patio sits empty by noon. Shade solves half of that. A screened porch solves most of it. The choice between them comes down to how you actually use the space and how far into the year you want to keep using it.</p>
       <h2>What a Covered Patio Does</h2>
@@ -91,6 +96,7 @@ const posts: Record<string, { title: string; date: string; isoDate: string; cate
     isoDate: "2026-03-25",
     category: "Buying Guide",
     description: "Window replacement cost in Austin, TX depends on window count, frame material, and style. Here is how homeowners think through the numbers before requesting a quote.",
+    image: "/images/gallery/project-07.jpg",
     body: `
       <p>Most homeowners call with a total project in mind before they have counted their windows. Start there. A typical Austin house has somewhere between 12 and 20 windows. The count alone changes the conversation more than any other single factor.</p>
       <h2>The Basic Price Drivers</h2>
@@ -113,6 +119,7 @@ const posts: Record<string, { title: string; date: string; isoDate: string; cate
     isoDate: "2026-03-20",
     category: "Siding",
     description: "Vinyl vs. fiber cement siding in Austin, TX. Compare cost, heat resistance, and long-term performance to choose the right material for your home.",
+    image: "/images/gallery/project-21.jpg",
     body: `
       <p>Vinyl costs less upfront. Fiber cement lasts longer and paints better. That is the core trade-off, and it is genuinely worth thinking through before you commit to a full re-side.</p>
       <h2>Price Difference</h2>
@@ -135,6 +142,7 @@ const posts: Record<string, { title: string; date: string; isoDate: string; cate
     isoDate: "2026-03-15",
     category: "Window Replacement",
     description: "Drafts, condensation, and rising energy bills are the obvious signals. Seven warning signs Austin homeowners commonly overlook when evaluating windows.",
+    image: "/images/gallery/project-02.jpg",
     body: `
       <p>Austin homes work hard. The AC runs from May through October, the sun bakes south-facing glass all afternoon, and the occasional hailstorm puts real stress on anything not built for the Texas climate. Most windows last 15 to 20 years before the signs of failure start showing up. Here is what to look for before a small problem becomes an expensive one.</p>
       <h2>Drafts Around the Frame</h2>
@@ -159,6 +167,7 @@ const posts: Record<string, { title: string; date: string; isoDate: string; cate
     isoDate: "2026-02-28",
     category: "Energy Efficiency",
     description: "How energy-efficient windows lower utility bills in Austin, TX. Learn how Low-E glass and double-pane insulation perform against the Texas summer heat.",
+    image: "/images/gallery/project-06.jpg",
     body: `
       <p>July in Austin averages daily highs above 100 degrees for weeks at a stretch. Your home's windows are on the front line of that heat load. Old, single-pane, or poorly sealed windows bleed conditioned air all summer long. The right replacement windows make a measurable difference on your monthly bill.</p>
       <h2>What Low-E Glass Actually Does</h2>
@@ -177,6 +186,7 @@ const posts: Record<string, { title: string; date: string; isoDate: string; cate
     isoDate: "2026-02-10",
     category: "Buying Guide",
     description: "Vinyl, fiberglass, or wood window frames for Austin homes. Compare cost, maintenance, and energy performance to choose the right replacement window material.",
+    image: "/images/gallery/project-09.jpg",
     body: `
       <p>The frame material is the first decision that eliminates half your options. Get it wrong and you will be living with the consequences for 20 years. Vinyl is what most Austin homeowners end up with, and that is not a default choice so much as a well-tested one. But fiberglass and wood have real advantages that vinyl cannot match. Here is how to think through it.</p>
       <h2>Vinyl</h2>
@@ -197,6 +207,7 @@ const posts: Record<string, { title: string; date: string; isoDate: string; cate
     isoDate: "2026-01-22",
     category: "Door Replacement",
     description: "Sliding vs. French patio doors in Austin, TX. Compare clearance, screen options, cost, and sightlines to find the right fit for your floor plan.",
+    image: "/images/gallery/project-16.jpg",
     body: `
       <p>Walk into any Austin home built in the last 30 years and you will likely find a sliding glass door connecting the living room to the back patio. It works. It is practical. But French patio doors have made a real comeback, and for some floor plans they are simply the better fit. The difference comes down to space, sightlines, and what you want your home to feel like when you open it up.</p>
       <h2>The Case for Sliding Patio Doors</h2>
@@ -215,6 +226,7 @@ const posts: Record<string, { title: string; date: string; isoDate: string; cate
     isoDate: "2026-01-05",
     category: "Installation",
     description: "Most Austin window replacement projects complete in a single day. A step-by-step walkthrough from crew arrival through final inspection for Austin homeowners.",
+    image: "/images/gallery/project-22.jpg",
     body: `
       <p>Most window replacement jobs in Austin finish in a single day. That is not a sales pitch. It is the actual schedule, assuming your windows were measured correctly and ordered to spec. Here is a straightforward walkthrough of what happens from first arrival to final inspection.</p>
       <h2>Morning Arrival</h2>
@@ -235,6 +247,7 @@ const posts: Record<string, { title: string; date: string; isoDate: string; cate
     isoDate: "2025-12-18",
     category: "Outdoor Enclosures",
     description: "Covered patios, screened porches, pergolas, and sunrooms for Austin, TX. Choose the right outdoor enclosure for your yard and year-round comfort.",
+    image: "/images/gallery/project-24.jpg",
     body: `
       <p>The back yard problem in Austin is simple. Half the year it is perfect outside. The other half, roughly June through September, it is genuinely too hot to sit in direct sun for more than a few minutes. A covered patio solves that. A screened porch solves it even better. The right structure turns a rarely-used back yard into a space you actually want to spend time in.</p>
       <h2>Covered Patios</h2>
@@ -255,6 +268,7 @@ const posts: Record<string, { title: string; date: string; isoDate: string; cate
     isoDate: "2026-03-10",
     category: "Siding",
     description: "Austin heat, UV exposure, and hail leave specific patterns on aging siding. Here is what Texas homeowners should look for before moisture gets in.",
+    image: "/images/gallery/project-19.jpg",
     body: `
       <p>Fifteen-year-old siding on an Austin home shows its age in specific ways. The sun does more damage here than in most parts of the country. Heat, UV, and the occasional hail event leave a pattern that is easy to read if you know what to look for.</p>
       <h2>Faded or Chalky Color</h2>
@@ -277,6 +291,7 @@ const posts: Record<string, { title: string; date: string; isoDate: string; cate
     isoDate: "2026-03-03",
     category: "Door Replacement",
     description: "How to choose an entry door for your Austin home. Compare fiberglass, steel, and wood for durability, appearance, and energy performance in the Texas climate.",
+    image: "/images/gallery/project-14.jpg",
     body: `
       <p>The entry door is the first thing visitors notice. It is also the thing most homeowners replace only once. Pick the wrong material and you will be repainting or refinishing it every couple of years in Austin's climate. Here is how to think through the decision before you start shopping.</p>
       <h2>Start with the Material</h2>
@@ -377,8 +392,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <section className="py-14" style={{ backgroundColor: "#1a3a5c" }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+      <section className="relative py-14 overflow-hidden" style={{ backgroundColor: "#1a3a5c" }}>
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={post.image}
+            alt=""
+            fill
+            className="object-cover opacity-20"
+            priority
+            quality={40}
+          />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <nav className="text-sm mb-4 opacity-70">
             <Link href="/" className="hover:opacity-100">Home</Link>
             <span className="mx-2">/</span>
