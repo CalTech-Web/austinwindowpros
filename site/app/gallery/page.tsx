@@ -49,7 +49,7 @@ export default function GalleryPage() {
             quality={40}
           />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center">
           <nav className="text-sm mb-4 opacity-70">
             <Link href="/" className="hover:opacity-100">Home</Link>
             <span className="mx-2">/</span>
@@ -58,10 +58,10 @@ export default function GalleryPage() {
           <h1 className="text-3xl sm:text-4xl font-extrabold mb-3" style={{ fontFamily: "var(--font-overpass)" }}>
             Project Gallery
           </h1>
-          <p className="text-lg opacity-90 max-w-2xl mb-8">
+          <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
             Over 30 years of window and door installations across Austin and Central Texas. Browse real projects completed by our team.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact/"
               className="inline-flex items-center justify-center px-7 py-3 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90"

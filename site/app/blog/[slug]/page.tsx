@@ -407,7 +407,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             quality={40}
           />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center">
           <nav className="text-sm mb-4 opacity-70">
             <Link href="/" className="hover:opacity-100">Home</Link>
             <span className="mx-2">/</span>
@@ -422,7 +422,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {post.title}
           </h1>
           <p className="text-sm opacity-70 mb-6">{post.date}</p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact/"
               className="inline-flex items-center justify-center px-7 py-3 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90"
