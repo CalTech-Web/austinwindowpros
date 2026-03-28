@@ -166,7 +166,7 @@ export default function SidingPage() {
                 Austin Window Pros installs vinyl, fiber cement, wood, stucco, stone veneer, and composite siding. David Adams can look at your exterior, tell you honestly what is wearing and what is not, and put together pricing across two or three material options so you have something real to compare. Call (512) 422-1907 for a free walkthrough.
               </p>
             </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg lg:order-first">
               <Image
                 src="/images/gallery/project-19.jpg"
                 alt="Siding installation project in Austin Texas"

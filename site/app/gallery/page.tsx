@@ -44,7 +44,7 @@ export default function GalleryPage() {
             src="/images/gallery/winpro-image-210.jpg"
             alt=""
             fill
-            className="object-cover opacity-20"
+            className="object-cover opacity-30"
             priority
             quality={40}
           />

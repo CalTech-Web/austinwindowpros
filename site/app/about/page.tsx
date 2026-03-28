@@ -157,7 +157,7 @@ export default function AboutPage() {
             src="/images/gallery/winpro-image-101.jpg"
             alt=""
             fill
-            className="object-cover opacity-20"
+            className="object-cover opacity-30"
             priority
             quality={40}
           />

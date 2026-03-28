@@ -67,7 +67,7 @@ export default function ContactPage() {
             src="/images/gallery/20220309_140536.jpg"
             alt=""
             fill
-            className="object-cover opacity-20"
+            className="object-cover opacity-30"
             priority
             quality={40}
           />

@@ -133,7 +133,7 @@ export default function DoorReplacementPage() {
                 Austin Window Pros carries Therma-Tru, Neumadoors, and Masonite. Every door we install is Energy Star Qualified with Low-E glass and comes with manufacturer warranty coverage. We custom size entries and patio doors to your opening, so the fit is right the first time and you are not looking at visible gaps at the frame a year later.
               </p>
             </div>
-            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+            <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg lg:order-first">
               <Image
                 src="/images/gallery/project-14.jpg"
                 alt="Door replacement project in Austin Texas"

@@ -102,7 +102,7 @@ export default function LocationsPage() {
             src="/images/gallery/20210301_152221.jpg"
             alt="Window installation project in Austin TX"
             fill
-            className="object-cover opacity-20"
+            className="object-cover opacity-30"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center">

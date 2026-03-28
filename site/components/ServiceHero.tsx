@@ -17,7 +17,7 @@ export default function ServiceHero({ title, subtitle, breadcrumb, image }: Serv
             src={image}
             alt=""
             fill
-            className="object-cover opacity-20"
+            className="object-cover opacity-30"
             priority
             quality={40}
           />
